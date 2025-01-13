@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Megan's Valentine's Countdown 💖</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/tone@14.8.35/build/Tone.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap');
 
         body {
-            background: #ffe6f0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+            background-size: 400% 400%;
+            animation: gradientFade 10s infinite alternate ease-in-out;
             padding: 20px;
             font-family: 'Poppins', sans-serif;
             text-align: center;
+            overflow: hidden;
         }
+
+        @keyframes gradientFade {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-family: 'Great Vibes', cursive;
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #d63384;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         }
+
         .calendar {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
         }
+
         .day {
             background: linear-gradient(135deg, #ffc4d6, #ffdef5);
             border-radius: 15px;
-            padding: 25px;
+            padding: 20px;
             font-size: 20px;
             font-weight: bold;
             color: #7d1338;
@@ -41,54 +61,65 @@
             transition: transform 0.3s, background 0.4s;
             position: relative;
         }
-        .day.locked {
-            background-color: #d3d3d3;
-            cursor: not-allowed;
-            color: #ffffff;
+
+        .day .lock-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: #7d1338;
         }
-        .solved {
-            background-color: #ffdef5;
-            border: 3px solid #c2185b;
+
+        .day.locked .lock-icon {
+            display: block;
         }
-        .favorite-memory-input {
-            margin-top: 15px;
+
+        .day.locked:hover .date-text {
+            visibility: hidden;
         }
-        .mood-changer {
-            margin: 10px;
+
+        .day.solved .linked-date {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.2rem;
+            margin-top: 5px;
+            color: #c2185b;
         }
-        .mute-button {
-            margin-top: 10px;
-        }
+
         .shake {
             animation: shake 0.5s ease-in-out;
         }
+
         @keyframes shake {
-            0%, 100% {
+            0%,
+            100% {
                 transform: translateX(0);
             }
+
             25% {
                 transform: translateX(-5px);
             }
+
             50% {
                 transform: translateX(5px);
             }
         }
     </style>
 </head>
+
 <body>
     <h1>Megan's Valentine's Countdown 💖</h1>
     <div class="controls">
-        <button class="btn btn-warning mood-changer">🎶 Change Mood Music</button>
-        <button class="btn btn-dark mute-button">🔇 Mute</button>
+        <button class="btn btn-danger reset-button">🔄 Reset Progress</button>
     </div>
+    <div class="scoreboard">Score: <span id="score">0</span> | Wrong Guesses: <span id="wrong-guesses">0</span></div>
     <div class="calendar"></div>
 
     <!-- Puzzle Modal -->
     <div class="modal fade" id="puzzleModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Trivia Challenge 🎁</h5>
+            <div class="modal-content puzzle-modal-content">
+                <div class="modal-header puzzle-modal-header">
+                    <h5 class="modal-title">🎁 Fun Trivia Challenge</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
@@ -100,32 +131,15 @@
         </div>
     </div>
 
-    <!-- Event Details Modal -->
-    <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img class="event-image" alt="Event Image">
-                    <p class="event-details"></p>
-                    <textarea class="form-control favorite-memory-input" placeholder="Write your favorite memory of this day..." rows="3"></textarea>
-                    <button class="btn btn-success save-memory mt-3">Save Memory</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         let events, rules;
-        let isMuted = false;
-        const synth = new Tone.Synth().toDestination();
+        let score = 0, wrongGuesses = 0;
+
         const today = new Date();
-        const currentDay = today.getDate();
+        const year = 2025;
+        const month = 1;
 
         const ordinalSuffix = (day) => {
             const j = day % 10, k = day % 100;
@@ -143,109 +157,86 @@
                 events = eventsData;
                 rules = rulesData;
 
-                for (let i = 1; i <= 14; i++) {
+                // Shuffle the days randomly
+                const daysArray = Array.from({ length: 14 }, (_, i) => i + 1);
+                const shuffledDays = daysArray.sort(() => Math.random() - 0.5);
+
+                shuffledDays.forEach((i) => {
+                    const isFirstDay = i === 1; // The first day should always be unlocked
+                    const unlockDate = new Date(year, month, i);
                     const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true";
-                    const formattedDate = `February ${ordinalSuffix(i)}`;
-                    const isUnlockedEarly = i === 1; // Allow February 1st early
+                    const formattedDate = `<span class="date-text">February ${ordinalSuffix(i)}</span>`;
+                    const isUnlocked = isFirstDay || unlocked || (today >= unlockDate);
+
                     const dayDiv = $(`
-                        <div class="day ${(isUnlockedEarly || unlocked || i <= currentDay) ? '' : 'locked'}" data-day="${i}">
+                        <div class="day ${isUnlocked ? '' : 'locked'}" data-day="${i}">
                             <i class="fa-solid fa-heart"></i> ${formattedDate}
+                            <span class="lock-icon">${!isUnlocked ? "🔒" : ""}</span>
                         </div>
                     `);
                     $(".calendar").append(dayDiv);
-                }
+                });
 
                 $(".day").click(function () {
                     const day = $(this).data("day");
                     const rule = rules.find(r => r.day === day);
+                    const linkedQuestions = rules.filter(r => r.day === day);
 
                     if ($(this).hasClass("locked")) {
                         $(this).addClass("shake");
                         setTimeout(() => $(this).removeClass("shake"), 500);
-                        alert("This day is locked until the actual date. Come back later!");
                         return;
                     }
 
-                    if ($(this).hasClass("solved")) {
-                        showEventDetails(rule.linkedEventDate);
-                    } else if (rule) {
-                        $(".puzzle-text").text(rule.question);
-                        $(".multiple-choice-options").empty();
+                    if (rule) {
+                        let currentQuestionIndex = 0;
+                        $(".puzzle-text").text(linkedQuestions[currentQuestionIndex].question);
+                        showOptions(linkedQuestions[currentQuestionIndex]);
 
-                        rule.options.forEach(option => {
-                            $(".multiple-choice-options").append(`
-                                <button class="btn btn-outline-primary m-2 choice-option">${option}</button>
-                            `);
+                        $(".skip-question").off().click(function () {
+                            currentQuestionIndex = (currentQuestionIndex + 1) % linkedQuestions.length;
+                            $(".puzzle-text").text(linkedQuestions[currentQuestionIndex].question);
+                            showOptions(linkedQuestions[currentQuestionIndex]);
                         });
 
                         $("#puzzleModal").modal("show");
-
-                        $(".choice-option").off().click(function () {
-                            const selectedOption = $(this).text();
-                            if (selectedOption === rule.answer) {
-                                confetti({
-                                    particleCount: 200,
-                                    spread: 120,
-                                    origin: { y: 0.6 }
-                                });
-                                alert("Correct! 🎉 You've unlocked the event!");
-                                $(`[data-day=${day}]`).addClass("solved");
-                                localStorage.setItem(`day${day}-unlocked`, "true");
-                                $("#puzzleModal").modal("hide");
-                                showEventDetails(rule.linkedEventDate);
-                            } else {
-                                alert("Oops! Try again or skip!");
-                            }
-                        });
-
-                        $(".skip-question").off().click(function () {
-                            $("#puzzleModal").modal("hide");
-                            alert("No worries! Moving on to the next challenge! 🌟");
-                        });
                     }
                 });
 
-                function showEventDetails(eventDate) {
-                    const event = events.find(e => e.date === eventDate);
-                    if (event) {
-                        $(".modal-title").text(event.title);
-                        $(".event-image").attr("src", event.image);
-                        $(".event-details").html(event.details);
-                        const memoryKey = `${eventDate}-memory`;
-                        $(".favorite-memory-input").val(localStorage.getItem(memoryKey) || "");
-                        $("#eventModal").modal("show");
+                function showOptions(rule) {
+                    $(".multiple-choice-options").empty();
+                    rule.options.forEach(option => {
+                        $(".multiple-choice-options").append(`
+                            <button class="btn btn-outline-primary m-2 choice-option">${option}</button>
+                        `);
+                    });
 
-                        $(".save-memory").off().click(function () {
-                            const memory = $(".favorite-memory-input").val().trim();
-                            localStorage.setItem(memoryKey, memory);
-                            confetti({ particleCount: 300, spread: 160, origin: { y: 0.4 } });
-                            alert("Memory saved! ❤️");
-                        });
-                    }
+                    $(".choice-option").off().click(function () {
+                        const selectedOption = $(this).text();
+                        if (selectedOption === rule.answer) {
+                            confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
+                            score++;
+                            $("#score").text(score);
+                            $(`[data-day=${rule.day}]`).addClass("solved");
+                            localStorage.setItem(`day${rule.day}-unlocked`, "true");
+                            $("#puzzleModal").modal("hide");
+                        } else {
+                            wrongGuesses++;
+                            $("#wrong-guesses").text(wrongGuesses);
+                            alert("Oops! Try again!");
+                        }
+                    });
                 }
 
-                $(".mood-changer").click(function () {
-                    if (!isMuted) {
-                        const notes = ["C4", "E4", "G4", "B4"];
-                        let index = 0;
-                        const playNote = () => {
-                            if (!isMuted) {
-                                synth.triggerAttackRelease(notes[index], "8n");
-                                index = (index + 1) % notes.length;
-                                setTimeout(playNote, 1000);
-                            }
-                        };
-                        playNote();
-                        confetti({ particleCount: 400, spread: 150 });
+                $(".reset-button").click(function () {
+                    if (confirm("Are you sure you want to reset your progress?")) {
+                        localStorage.clear();
+                        location.reload();
                     }
-                });
-
-                $(".mute-button").click(function () {
-                    isMuted = !isMuted;
-                    $(this).text(isMuted ? "🔊 Unmute" : "🔇 Mute");
                 });
             });
         });
     </script>
 </body>
+
 </html>
