@@ -1,0 +1,68 @@
+[
+    {
+        "date": "Feb 13",
+        "title": "A Romantic Night in San Francisco",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Nopa_San_Francisco_Exterior.jpg",
+        "details": "Begin with a romantic kiss at the airport around 6:45 PM before heading to dinner at <a href='https://nopasf.com/' target='_blank'>Nopa</a> at 8:30 PM. After dinner, enjoy cocktails and live music at <a href='https://www.madroneartbar.com/' target='_blank'>Madrone Art Bar</a>."
+    },
+    {
+        "date": "Feb 14",
+        "title": "Golden Gate Park & Ghirardelli Square",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Golden_Gate_Park_San_Francisco.jpg",
+        "details": "Enjoy tea at the Japanese Tea Garden, take a romantic stroll in the Shakespeare Garden, and finish with sundaes at Ghirardelli Square."
+    },
+    {
+        "date": "Feb 15",
+        "title": "Airport Lounge & Flight to Delhi",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Lounge_Airport.jpg",
+        "details": "Champagne in the airport lounge before your adventure. Cozy up and enjoy a rom-com at 30,000 feet."
+    },
+    {
+        "date": "Feb 17",
+        "title": "Delhi: Khan Market & Sunder Nursery",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Khan_Market.jpg",
+        "details": "Shop at <strong>Khan Market</strong> and stroll through <a href='https://en.wikipedia.org/wiki/Sunder_Nursery' target='_blank'>Sunder Nursery</a>, where Mughal history meets blooming gardens."
+    },
+    {
+        "date": "Feb 18",
+        "title": "India Gate & The Piano Man",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/India_Gate_in_New_Delhi.jpg",
+        "details": "Stroll past <strong>India Gate</strong>, then unwind at <strong>The Piano Man</strong> with live jazz and sweet cocktails."
+    },
+    {
+        "date": "Feb 19",
+        "title": "Tattoos, Qutab Minar & Qla",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Qutab_Minar%2C_Delhi.jpg",
+        "details": "Visit Devilz Tattoo for some ink and head to the iconic <a href='https://en.wikipedia.org/wiki/Qutab_Minar' target='_blank'>Qutab Minar</a> before dining at <strong>Qla</strong>."
+    },
+    {
+        "date": "Feb 20",
+        "title": "The Taj Mahal",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Taj_Mahal_in_March_2004.jpg",
+        "details": "Visit the Taj Mahal at sunrise for a breathtaking view of this symbol of eternal love."
+    },
+    {
+        "date": "Feb 21",
+        "title": "Exploring Jaipur's Forts",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Amber_Fort_India_Entry.jpg",
+        "details": "Spend the day exploring Jaipur's grand forts, including the majestic Amber Fort and its famous Hall of Mirrors."
+    },
+    {
+        "date": "Feb 22",
+        "title": "Rishikesh & Ashram Life",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Rishikesh_Ganga_View.jpg",
+        "details": "Arrive in Rishikesh and immerse yourself in meditation, yoga, and quiet walks along the Ganges River."
+    },
+    {
+        "date": "Feb 26",
+        "title": "Goa: Sun, Sand & Passion",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Goa_beach_sunset.jpg",
+        "details": "Relax by the sun-kissed beaches of Goa, sip cocktails at beachside bars, and enjoy the sunset."
+    },
+    {
+        "date": "Feb 27",
+        "title": "Goa Flea Market & Evening Stroll",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Anjuna_Flea_Market_Goa.jpg",
+        "details": "Shop for souvenirs, spices, and handmade jewelry at the <strong>Anjuna Flea Market</strong> before a romantic beach walk."
+    }
+]

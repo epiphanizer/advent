@@ -1,0 +1,100 @@
+[
+    {
+        "day": 1,
+        "question": "Which city is famous for the Golden Gate Bridge?",
+        "options": ["San Francisco", "Los Angeles", "Chicago", "New York"],
+        "answer": "San Francisco",
+        "linkedEventDate": "Feb 13"
+    },
+    {
+        "day": 2,
+        "question": "Which San Francisco area is known for Italian cafes and Beat poet history?",
+        "options": ["North Beach", "Chinatown", "Mission District", "Haight-Ashbury"],
+        "answer": "North Beach",
+        "linkedEventDate": "Feb 13"
+    },
+    {
+        "day": 3,
+        "question": "Where can you find colorful Victorian houses known as 'The Painted Ladies'?",
+        "options": ["Alamo Square", "Pacific Heights", "Castro", "SOMA"],
+        "answer": "Alamo Square",
+        "linkedEventDate": "Feb 14"
+    },
+    {
+        "day": 4,
+        "question": "Which San Francisco park has a famous Japanese Tea Garden?",
+        "options": ["Golden Gate Park", "Dolores Park", "Presidio", "Twin Peaks"],
+        "answer": "Golden Gate Park",
+        "linkedEventDate": "Feb 14"
+    },
+    {
+        "day": 5,
+        "question": "Which famous red-orange bridge spans the Golden Gate Strait?",
+        "options": ["Brooklyn Bridge", "Bay Bridge", "Golden Gate Bridge", "Tower Bridge"],
+        "answer": "Golden Gate Bridge",
+        "linkedEventDate": "Feb 14"
+    },
+    {
+        "day": 6,
+        "question": "Which Indian city is home to the Taj Mahal?",
+        "options": ["Agra", "Delhi", "Mumbai", "Jaipur"],
+        "answer": "Agra",
+        "linkedEventDate": "Feb 20"
+    },
+    {
+        "day": 7,
+        "question": "Which Delhi market is known for boutiques and rooftop cafes?",
+        "options": ["Khan Market", "Chandni Chowk", "Sarojini Nagar", "Lajpat Nagar"],
+        "answer": "Khan Market",
+        "linkedEventDate": "Feb 17"
+    },
+    {
+        "day": 8,
+        "question": "Which monument in Delhi is shaped like an arch and honors fallen soldiers?",
+        "options": ["India Gate", "Red Fort", "Qutub Minar", "Lotus Temple"],
+        "answer": "India Gate",
+        "linkedEventDate": "Feb 18"
+    },
+    {
+        "day": 9,
+        "question": "Which artsy Delhi neighborhood has lakeside ruins and trendy cafes?",
+        "options": ["Hauz Khas Village", "Connaught Place", "Karol Bagh", "Paharganj"],
+        "answer": "Hauz Khas Village",
+        "linkedEventDate": "Feb 18"
+    },
+    {
+        "day": 10,
+        "question": "What white marble building in Agra is a symbol of love?",
+        "options": ["Hawa Mahal", "Taj Mahal", "Humayun's Tomb", "Amber Fort"],
+        "answer": "Taj Mahal",
+        "linkedEventDate": "Feb 20"
+    },
+    {
+        "day": 11,
+        "question": "Which Jaipur fort has a Hall of Mirrors?",
+        "options": ["Amber Fort", "Mehrangarh Fort", "Agra Fort", "Nahargarh Fort"],
+        "answer": "Amber Fort",
+        "linkedEventDate": "Feb 21"
+    },
+    {
+        "day": 12,
+        "question": "Which Indian city by the Ganges River is known for yoga and meditation?",
+        "options": ["Rishikesh", "Varanasi", "Haridwar", "Amritsar"],
+        "answer": "Rishikesh",
+        "linkedEventDate": "Feb 22"
+    },
+    {
+        "day": 13,
+        "question": "Which Goan beach is famous for sunset cruises and beachside cafes?",
+        "options": ["Palolem Beach", "Anjuna Beach", "Baga Beach", "Vagator Beach"],
+        "answer": "Palolem Beach",
+        "linkedEventDate": "Feb 26"
+    },
+    {
+        "day": 14,
+        "question": "Which popular flea market in Goa is known for crafts and spices?",
+        "options": ["Anjuna Flea Market", "Calangute Market", "Mapusa Market", "Margao Market"],
+        "answer": "Anjuna Flea Market",
+        "linkedEventDate": "Feb 27"
+    }
+]
