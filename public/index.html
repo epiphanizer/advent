@@ -43,6 +43,18 @@
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
         }
 
+        .alien-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: transparent;
+            border: none;
+            font-size: 40px;
+            color: #28a745;
+            cursor: pointer;
+            z-index: 10;
+        }
+
         .calendar {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -62,27 +74,48 @@
             position: relative;
         }
 
-        .day .lock-icon {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            color: #7d1338;
-        }
-
-        .day.locked .lock-icon {
-            display: block;
-        }
-
-        .day.locked:hover .date-text {
+        .day .lock-hover {
             visibility: hidden;
         }
 
-        .day.solved .linked-date {
+        .day.locked:hover .lock-hover {
+            visibility: visible;
+        }
+
+        .day.solved {
+            background: linear-gradient(135deg, #d4edda, #a8e6cf);
+            color: #2d5a4a;
+        }
+
+        .day.solved:hover .lock-hover {
+            visibility: hidden;
+        }
+
+        .day .linked-date {
             font-family: 'Great Vibes', cursive;
             font-size: 1.2rem;
             margin-top: 5px;
             color: #c2185b;
+        }
+
+        .choice-option {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            border-radius: 12px;
+        }
+
+        .trivia-recap {
+            font-style: italic;
+            background: #ffe6f0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .exit-game {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ff6b6b;
         }
 
         .shake {
@@ -103,10 +136,33 @@
                 transform: translateX(5px);
             }
         }
+        .canvas-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 20;
+        }
+
+        canvas {
+            display: block;
+            margin: auto;
+            background-color: black;
+        }
+
     </style>
 </head>
 
 <body>
+    
+    <div class="canvas-container">
+        <button class="btn btn-danger exit-game">Exit Game</button>
+        <canvas id="spaceInvadersCanvas" width="800" height="600"></canvas>
+    </div>
+    <button class="alien-button" title="Play Space Invaders">👽</button>
     <h1>Megan's Valentine's Countdown 💖</h1>
     <div class="controls">
         <button class="btn btn-danger reset-button">🔄 Reset Progress</button>
@@ -117,8 +173,8 @@
     <!-- Puzzle Modal -->
     <div class="modal fade" id="puzzleModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content puzzle-modal-content">
-                <div class="modal-header puzzle-modal-header">
+            <div class="modal-content">
+                <div class="modal-header">
                     <h5 class="modal-title">🎁 Fun Trivia Challenge</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -131,111 +187,147 @@
         </div>
     </div>
 
+    <!-- Event Details Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="trivia-recap"></div>
+                    <img class="event-image" alt="Event Image">
+                    <p class="event-details"></p>
+                    <textarea class="form-control favorite-memory-input" placeholder="Write your favorite memory..." rows="3"></textarea>
+                    <button class="btn btn-success save-memory mt-3">Save Memory</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        let events, rules;
-        let score = 0, wrongGuesses = 0;
+        (function () {
+            const today = new Date();
+            const year = 2025;
+            const month = 1;
 
-        const today = new Date();
-        const year = 2025;
-        const month = 1;
+            let events = [], rules = [];
+            let score = 0, wrongGuesses = 0;
 
-        const ordinalSuffix = (day) => {
-            const j = day % 10, k = day % 100;
-            if (j === 1 && k !== 11) return `${day}st`;
-            if (j === 2 && k !== 12) return `${day}nd`;
-            if (j === 3 && k !== 13) return `${day}rd`;
-            return `${day}th`;
-        };
+            function ordinalSuffix(day) {
+                const j = day % 10, k = day % 100;
+                if (j === 1 && k !== 11) return `${day}st`;
+                if (j === 2 && k !== 12) return `${day}nd`;
+                if (j === 3 && k !== 13) return `${day}rd`;
+                return `${day}th`;
+            }
 
-        $(document).ready(function () {
-            Promise.all([
-                fetch('events.json').then(res => res.json()),
-                fetch('rules.json').then(res => res.json())
-            ]).then(([eventsData, rulesData]) => {
-                events = eventsData;
-                rules = rulesData;
+            function showOptions(rule) {
+                $(".multiple-choice-options").empty();
+                const options = ['A', 'B', 'C', 'D'];
 
-                // Shuffle the days randomly
-                const daysArray = Array.from({ length: 14 }, (_, i) => i + 1);
-                const shuffledDays = daysArray.sort(() => Math.random() - 0.5);
-
-                shuffledDays.forEach((i) => {
-                    const isFirstDay = i === 1; // The first day should always be unlocked
-                    const unlockDate = new Date(year, month, i);
-                    const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true";
-                    const formattedDate = `<span class="date-text">February ${ordinalSuffix(i)}</span>`;
-                    const isUnlocked = isFirstDay || unlocked || (today >= unlockDate);
-
-                    const dayDiv = $(`
-                        <div class="day ${isUnlocked ? '' : 'locked'}" data-day="${i}">
-                            <i class="fa-solid fa-heart"></i> ${formattedDate}
-                            <span class="lock-icon">${!isUnlocked ? "🔒" : ""}</span>
-                        </div>
+                rule.options.forEach((option, index) => {
+                    $(".multiple-choice-options").append(`
+                        <button class="btn btn-outline-primary m-2 choice-option">${options[index]}. ${option}</button>
                     `);
-                    $(".calendar").append(dayDiv);
                 });
 
-                $(".day").click(function () {
-                    const day = $(this).data("day");
-                    const rule = rules.find(r => r.day === day);
-                    const linkedQuestions = rules.filter(r => r.day === day);
-
-                    if ($(this).hasClass("locked")) {
-                        $(this).addClass("shake");
-                        setTimeout(() => $(this).removeClass("shake"), 500);
-                        return;
-                    }
-
-                    if (rule) {
-                        let currentQuestionIndex = 0;
-                        $(".puzzle-text").text(linkedQuestions[currentQuestionIndex].question);
-                        showOptions(linkedQuestions[currentQuestionIndex]);
-
-                        $(".skip-question").off().click(function () {
-                            currentQuestionIndex = (currentQuestionIndex + 1) % linkedQuestions.length;
-                            $(".puzzle-text").text(linkedQuestions[currentQuestionIndex].question);
-                            showOptions(linkedQuestions[currentQuestionIndex]);
-                        });
-
-                        $("#puzzleModal").modal("show");
+                $(".choice-option").off().click(function () {
+                    const selectedOption = $(this).text().substring(3);
+                    if (selectedOption === rule.answer) {
+                        confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
+                        score++;
+                        $("#score").text(score);
+                        $(`[data-day=${rule.day}]`).addClass("solved");
+                        localStorage.setItem(`day${rule.day}-unlocked`, "true");
+                        $("#puzzleModal").modal("hide");
+                        showEventDetails(rule.linkedEventDate, rule);
+                    } else {
+                        wrongGuesses++;
+                        $("#wrong-guesses").text(wrongGuesses);
+                        alert("Oops! Try again!");
                     }
                 });
+            }
 
-                function showOptions(rule) {
-                    $(".multiple-choice-options").empty();
-                    rule.options.forEach(option => {
-                        $(".multiple-choice-options").append(`
-                            <button class="btn btn-outline-primary m-2 choice-option">${option}</button>
+            function showEventDetails(eventDate, rule) {
+                const event = events.find(e => e.date === eventDate);
+                if (event) {
+                    $(".modal-title").text(event.title);
+                    $(".event-image").attr("src", event.image);
+                    $(".event-details").html(event.details);
+                    $(".trivia-recap").html(`
+                        <strong>Trivia Recap:</strong> <br>
+                        Question: "${rule.question}" <br>
+                        Answer: "${rule.answer}"
+                    `);
+                    const memoryKey = `${eventDate}-memory`;
+                    $(".favorite-memory-input").val(localStorage.getItem(memoryKey) || "");
+                    $("#eventModal").modal("show");
+                }
+            }
+
+            $(document).ready(function () {
+                Promise.all([
+                    fetch('events.json').then(res => res.json()),
+                    fetch('rules.json').then(res => res.json())
+                ]).then(([eventsData, rulesData]) => {
+                    events = eventsData;
+                    rules = rulesData;
+
+                    const daysArray = Array.from({ length: 14 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
+                    daysArray.forEach((i) => {
+                        const isFirstDay = i === 1;
+                        const unlockDate = new Date(year, month, i);
+                        const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true";
+                        const isUnlocked = isFirstDay || unlocked || (today >= unlockDate);
+
+                        const dayDiv = $(`
+                            <div class="day ${isUnlocked ? '' : 'locked'}" data-day="${i}">
+                                <i class="fa-solid fa-heart"></i> February ${ordinalSuffix(i)}
+                                <div class="lock-hover">🔒 Locked</div>
+                            </div>
                         `);
+                        $(".calendar").append(dayDiv);
                     });
 
-                    $(".choice-option").off().click(function () {
-                        const selectedOption = $(this).text();
-                        if (selectedOption === rule.answer) {
-                            confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
-                            score++;
-                            $("#score").text(score);
-                            $(`[data-day=${rule.day}]`).addClass("solved");
-                            localStorage.setItem(`day${rule.day}-unlocked`, "true");
-                            $("#puzzleModal").modal("hide");
-                        } else {
-                            wrongGuesses++;
-                            $("#wrong-guesses").text(wrongGuesses);
-                            alert("Oops! Try again!");
+                    $(".day").click(function () {
+                        const day = $(this).data("day");
+                        const rule = rules.find(r => r.day === day);
+                        const linkedQuestions = rules.filter(r => r.day === day);
+
+                        if ($(this).hasClass("locked")) {
+                            $(this).addClass("shake");
+                            setTimeout(() => $(this).removeClass("shake"), 500);
+                            return;
+                        }
+
+                        if ($(this).hasClass("solved")) {
+                            showEventDetails(rule.linkedEventDate, rule);
+                        } else if (rule) {
+                            $(".puzzle-text").text(linkedQuestions[0].question);
+                            showOptions(linkedQuestions[0]);
+                            $("#puzzleModal").modal("show");
                         }
                     });
-                }
 
-                $(".reset-button").click(function () {
-                    if (confirm("Are you sure you want to reset your progress?")) {
-                        localStorage.clear();
-                        location.reload();
-                    }
+                    $(".reset-button").click(() => localStorage.clear() && location.reload());
+
+                    $(".alien-button").click(function () {
+                        if (!document.getElementById("spaceInvadersScript")) {
+                            const script = document.createElement("script");
+                            script.src = "./spaceInvaders.js";
+                            script.id = "spaceInvadersScript";
+                            document.body.appendChild(script);
+                        }
+                    });
                 });
             });
-        });
+        })();
     </script>
 </body>
 
