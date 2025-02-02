@@ -1,94 +1,100 @@
 [
     {
+        "day": 1,
+        "question": "Which special moment marks the beginning of our adventure together?",
+        "options": ["Boarding our flight to Delhi", "Checking into the hotel", "Exploring a new city", "Trying a new dish"],
+        "answer": "Boarding our flight to Delhi",
+        "linkedEventDate": "February 15"
+    },
+    {
+        "day": 2,
+        "question": "What incredible wonder of the world will we see in Agra?",
+        "options": ["The Taj Mahal", "The Great Wall", "The Eiffel Tower", "Machu Picchu"],
+        "answer": "The Taj Mahal",
+        "linkedEventDate": "February 26"
+    },
+    {
+        "day": 3,
+        "question": "Which city is famously known as the Pink City?",
+        "options": ["Jaipur", "Delhi", "Mumbai", "Agra"],
+        "answer": "Jaipur",
+        "linkedEventDate": "February 27"
+    },
+    {
+        "day": 4,
+        "question": "Which breathtaking Mughal-era monument inspired the Taj Mahal?",
+        "options": ["Humayun's Tomb", "Red Fort", "Qutub Minar", "India Gate"],
+        "answer": "Humayun's Tomb",
+        "linkedEventDate": "February 17"
+    },
+    {
+        "day": 5,
+        "question": "Which iconic landmark in Delhi honors fallen heroes?",
+        "options": ["India Gate", "Lotus Temple", "Gateway of India", "Amber Fort"],
+        "answer": "India Gate",
+        "linkedEventDate": "February 18"
+    },
+    {
+        "day": 6,
+        "question": "Which Indian island paradise is known for its crystal-clear waters and sandy beaches?",
+        "options": ["Havelock Island", "Goa", "Lakshadweep", "Kanyakumari"],
+        "answer": "Havelock Island",
+        "linkedEventDate": "February 19"
+    },
+    {
+        "day": 7,
+        "question": "Where will we find one of the most romantic sunset beaches in the world?",
+        "options": ["Radhanagar Beach", "Miami Beach", "Copacabana", "Bondi Beach"],
+        "answer": "Radhanagar Beach",
+        "linkedEventDate": "February 20"
+    },
+    {
+        "day": 8,
+        "question": "Where will we go snorkeling in the Andamans, discovering colorful marine life?",
+        "options": ["Elephant Beach", "Wandoor Beach", "Neil Island", "Marina Beach"],
+        "answer": "Elephant Beach",
+        "linkedEventDate": "February 22"
+    },
+    {
+        "day": 9,
+        "question": "Which Delhi shopping market is famous for its handmade crafts and souvenirs?",
+        "options": ["Dilli Haat", "Chandni Chowk", "Khan Market", "Paharganj"],
+        "answer": "Dilli Haat",
+        "linkedEventDate": "March 1"
+    },
+    {
+        "day": 10,
+        "question": "What famous market in Jaipur is known for its stunning handicrafts and textiles?",
+        "options": ["Bapu Bazaar", "Tripolia Bazaar", "Johari Bazaar", "Chandpole Bazaar"],
+        "answer": "Bapu Bazaar",
+        "linkedEventDate": "February 28"
+    },
+    {
+        "day": 11,
+        "question": "Where in Jaipur will we find the grand palace of mirrors, a sight fit for royalty?",
+        "options": ["Amber Fort", "Mehrangarh Fort", "Nahargarh Fort", "Agra Fort"],
+        "answer": "Amber Fort",
+        "linkedEventDate": "February 28"
+    },
+    {
+        "day": 12,
+        "question": "Which beautiful Delhi monument will greet us with lush gardens and centuries of history?",
+        "options": ["Lodhi Garden", "Lotus Temple", "Humayun's Tomb", "Qutub Minar"],
+        "answer": "Lodhi Garden",
+        "linkedEventDate": "February 18"
+    },
+    {
         "day": 13,
-        "question": "Where can you find colorful Victorian houses known as 'The Painted Ladies'?",
+        "question": "Where in San Francisco can we find colorful Victorian houses known as The Painted Ladies?",
         "options": ["Alamo Square", "Pacific Heights", "Castro", "SOMA"],
         "answer": "Alamo Square",
         "linkedEventDate": "February 13"
     },
     {
         "day": 14,
-        "question": "Which San Francisco park has a famous Japanese Tea Garden?",
+        "question": "Which San Francisco park is home to a stunning Japanese Tea Garden?",
         "options": ["Golden Gate Park", "Dolores Park", "Presidio", "Twin Peaks"],
         "answer": "Golden Gate Park",
         "linkedEventDate": "February 14"
-    },
-    {
-        "day": 4,
-        "question": "Which Mughal-era monument in Delhi is a UNESCO World Heritage Site and inspired the design of the Taj Mahal?",
-        "options": ["Humayun's Tomb", "Qutub Minar", "Red Fort", "Lotus Temple"],
-        "answer": "Humayun's Tomb",
-        "linkedEventDate": "February 17"
-    },    
-    {
-        "day": 1,
-        "question": "Which Delhi monument, shaped like an arch, honors fallen soldiers?",
-        "options": ["India Gate", "Red Fort", "Qutub Minar", "Lotus Temple"],
-        "answer": "India Gate",
-        "linkedEventDate": "February 18"
-    },
-    {
-        "day": 2,
-        "question": "Which Indian island is known for beautiful beaches and scuba diving?",
-        "options": ["Havelock Island", "Goa", "Lakshadweep", "Chennai"],
-        "answer": "Havelock Island",
-        "linkedEventDate": "February 19"
-    },
-    {
-        "day": 7,
-        "question": "Which beach in the Andamans is famous for its stunning sunsets?",
-        "options": ["Radhanagar Beach", "Kalapathar Beach", "Elephant Beach", "Neil Island Beach"],
-        "answer": "Radhanagar Beach",
-        "linkedEventDate": "February 20"
-    },
-    {
-        "day": 8,
-        "question": "Where in the Andamans can you experience snorkeling and clear blue waters?",
-        "options": ["Elephant Beach", "Wandoor Beach", "Sitapur Beach", "Kala Pathar Beach"],
-        "answer": "Elephant Beach",
-        "linkedEventDate": "February 22"
-    },
-    {
-        "day": 2,
-        "question": "Which city is home to the Taj Mahal?",
-        "options": ["Agra", "Jaipur", "Delhi", "Varanasi"],
-        "answer": "Agra",
-        "linkedEventDate": "February 26"
-    },
-    {
-        "day": 6,
-        "question": "Which Jaipur fort features the Hall of Mirrors?",
-        "options": ["Amber Fort", "Mehrangarh Fort", "Agra Fort", "Nahargarh Fort"],
-        "answer": "Amber Fort",
-        "linkedEventDate": "February 28"
-    },
-    {
-        "day": 1,
-        "question": "What city is called the Pink City?",
-        "options": ["Jaipur", "Mumbai", "Kolkata", "Lajpat Nagar"],
-        "answer": "Jaipur",
-        "linkedEventDate": "February 27"
-    },
-    {
-        "day": 12,
-        "question": "Which Delhi shopping area is famous for its handmade crafts and souvenirs?",
-        "options": ["Khan Market", "Dilli Haat", "Lajpat Nagar", "Paharganj"],
-        "answer": "Dilli Haat",
-        "linkedEventDate": "Mar 1"
-    },
-    {
-        "day": 13,
-        "question": "What famous market in Jaipur is known for handicrafts and textiles?",
-        "options": ["Tripolia Bazaar", "Bapu Bazaar", "Johari Bazaar", "Chandpole Bazaar"],
-        "answer": "Bapu Bazaar",
-        "linkedEventDate": "February 28"
-    },
-    {
-        "day": 14,
-        "question": "Which market in Jaipur is famous for selling jewelry?",
-        "options": ["Johari Bazaar", "Chandpole Bazaar", "Tripolia Bazaar", "Bapu Bazaar"],
-        "answer": "Johari Bazaar",
-        "linkedEventDate": "February 28"
     }
 ]
-

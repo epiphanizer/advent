@@ -195,7 +195,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <h6>📅 Trip Day: <span class="trip-day"></span></h6>
+                <h6>📅 Calendar Day: <span class="trip-day"></span></h6>
                 <div class="trivia-recap"></div>
                 <img class="event-image img-fluid mb-3" alt="Event Image">
                 
@@ -274,7 +274,7 @@
                 const event = events.find(e => e.date === eventDate);
                 if (event) {
                     $(".modal-title").text(`Day ${event.day}: ${event.title}`);
-                    $(".trip-day").text(event.day);
+                    $(".trip-day").text(rule.linkedEventDate);
                     $(".event-image").attr("src", event.image || "default-event.jpg"); // Use a default image if none provided
                     $(".morning-details").html(event.morning || "No morning details available.");
                     $(".afternoon-details").html(event.afternoon || "No afternoon details available.");
@@ -317,6 +317,7 @@
                                 <div class="lock-hover">🔒 Locked</div>
                             </div>
                         `);
+
 
 
                         $(".calendar").append(dayDiv);

@@ -1,112 +1,120 @@
 [
     {
     "date": "February 13",
-    "day": 1,
+    "day": 13,
     "title": "A Love-Filled Arrival",
-    "morning": "Meet at the airport, feeling the rush of anticipation.",
-    "afternoon": "Check-in at The Metro Hotel, a quiet haven in the heart of the city.",
+    "afternoon": "Meet at the airport, feeling the rush of anticipation... Check-in at The Metro Hotel, a quiet haven in the heart of the city.",
     "evening": "An intimate dinner at Nopa, sharing plates, stories, and candlelight. The night deepens at Madrone Art Bar, where music wraps around us like a warm embrace.",
     "lodging": "The Metro Hotel, 319 Divisadero Street, 3-star, Check-in 3:00 PM, Check-out Feb 15 before 11:00 AM",
     "transportation": "Flight to San Francisco",
-    "linkedEventDate": "February 13"
+    "linkedEventDate": "February 13",
+    "image": "/images/madrone-art-bar.jpg"
     },
     {
     "date": "February 14",
-    "day": 2,
+    "day": 14,
     "title": "A Day of Romance in San Francisco",
     "morning": "A slow stroll through Panhandle Park, laughter echoing as we capture moments in front of The Painted Ladies.",
     "afternoon": "Tea at the Japanese Tea Garden, followed by a dreamy picnic at Shakespeare Garden.",
     "evening": "Miniature golf & sundaes at Ghirardelli Square, golden hour at Golden Gate Bridge, and a secret toast at Bourbon & Branch.",
     "lodging": "The Metro Hotel",
     "transportation": "Local transport in San Francisco",
-    "linkedEventDate": "February 14"
+    "linkedEventDate": "February 14",
+    "image": "/images/tea-garden.jpg"
     },
     {
     "date": "February 15",
-    "day": 3,
+    "day": 1,
     "title": "Jet-Setting Together",
-    "morning": "A lazy morning, wrapped in soft sheets, reluctant to move.",
     "afternoon": "Champagne and whispered promises in the airport lounge.",
-    "evening": "A flight to Delhi—stepping into the unknown, together.",
+    "evening": "A flight to Delhi—stepping into the unknown, together... also, reading Bong Tour for the first time. Life will really never be the same.",
     "transportation": "Flight from San Francisco to Delhi",
-    "linkedEventDate": "February 15"
+    "linkedEventDate": "February 15",
+    "image": "/images/jet-setting.webp"
     },
     {
     "date": "February 17",
-    "day": 4,
+    "day": 5,
     "title": "A City Awakens",
     "morning": "A quiet arrival at Nizza East, where we rest before stepping into the hum of the city.",
     "afternoon": "A dreamy walk through Sunder Nursery & the timeless beauty of Humayun’s Tomb.",
     "evening": "A sultry night at The Piano Man—music, drinks, and the warmth of the city’s heart.",
     "lodging": "Nizza East (Airbnb) morning stay, Ambassador Hotel (Taj) check-in at 2:00 PM",
     "transportation": "Airport transfer to Nizza East",
-    "linkedEventDate": "February 17"
+    "linkedEventDate": "February 17",
+    "image": "/images/humayuns-tomb.jpg"
     },
     {
     "date": "February 18",
-    "day": 5,
+    "day": 6,
     "title": "Lost in Time",
     "morning": "A golden morning in Lodhi Garden, fingers brushing, steps in sync.",
     "afternoon": "Lunch at Dos in Lodhi Market, wandering through the charm of Khan Market.",
     "evening": "A final walk past India Gate, before visiting Sahil & Vasundra—friends, laughter, home away from home.",
     "lodging": "Ambassador Hotel",
     "transportation": "Local transport in Delhi",
-    "linkedEventDate": "February 18"
+    "linkedEventDate": "February 18",
+    "image": "/images/india-gate.jpg"
     },
     {
     "date": "February 19",
-    "day": 6,
+    "day": 7,
     "title": "Arrival in Paradise",
     "morning": "A flight to Andamans—an untouched dream waiting to unfold.",
     "afternoon": "Check-in at Munjoh Ocean Resort, the sea whispering promises of rest and renewal.",
     "evening": "Barefoot walks on the beach, fresh seafood, and a sky bursting with stars.",
     "lodging": "Munjoh Ocean Resort - Havelock Island",
     "transportation": "Flight to Port Blair, ferry to Havelock Island",
-    "linkedEventDate": "February 19"
+    "linkedEventDate": "February 19",
+    "image": "/images/ocean-restort.jpg"
     },
     {
         "date": "February 20",
-        "day": 7,
+        "day": 8,
         "title": "Love Beneath the Waves",
         "morning": "Scuba diving at Nemo Reef, where vibrant corals and gentle waves create a dreamscape beneath the surface.",
         "afternoon": "A long walk along Radhanagar Beach, tracing 'forever' into the sand.",
         "evening": "A barefoot candlelight dinner on the shore, slow dancing beneath a sky lit by endless stars.",
         "lodging": "Munjoh Ocean Resort - Havelock Island",
         "transportation": "Local island transport",
-        "linkedEventDate": "February 20"
+        "linkedEventDate": "February 20",
+        "image": "/images/nemo-reef.jpg"
         },
         {
         "date": "February 21",
-        "day": 8,
+        "day": 9,
         "title": "Sun-Kissed & Sweet",
-        "morning": "A lazy breakfast by the shore, waves lapping gently as we sip fresh coconut water at Beach No. 5.",
+        "morning": "Sunrise at Kalapathar Beach, a lazy breakfast by the shore",
         "afternoon": "Discovering island flavors—tasting Andaman-style egg rolls, exploring quaint village streets.",
-        "evening": "Sunset at Kalapathar Beach, the sky melting into gold and violet.",
+        "evening": "We hold hands and watch the sunset at Beach No. 5.",
         "lodging": "Munjoh Ocean Resort - Havelock Island",
         "transportation": "Local island transport",
-        "linkedEventDate": "February 21"
+        "linkedEventDate": "February 21",
+        "image": "/images/sunrise-kalapathar-beach-havelock.jpeg"
         },
         {
             "date": "February 22",
-            "day": 9,
+            "day": 10,
             "title": "A Day for Just Us",
             "morning": "A private boat carries us to Elephant Beach, where we snorkel in crystal-clear waters, surrounded by vibrant marine life.",
             "afternoon": "A return to our villa for a spa treatment, a long afternoon nap, and the sound of waves lulling us into relaxation.",
             "evening": "Wine, ocean breeze, and the kind of night that lingers forever.",
             "lodging": "Munjoh Ocean Resort - Havelock Island",
             "transportation": "Local island transport",
-            "linkedEventDate": "February 22"
+            "linkedEventDate": "February 22",
+            "image": "/images/elephant-beach.jpg"
             },
             {
             "date": "February 23",
-            "day": 10,
+            "day": 11,
             "title": "Farewell to Paradise",
             "morning": "One last swim in the warm Andaman waters, a quiet breakfast under the palm trees.",
             "afternoon": "Flight back from Andamans, with a layover in Kolkata to visit the historic Kalighat Temple.",
-            "evening": "Check-in at our hotel in Kolkata, a restful night before the journey continues.",
-            "lodging": "Hotel in Kolkata (TBD)",
+            "evening": "Fly from Kolkata to Delhi.",
+            "lodging": "Hotel in Delhi (TBD)",
             "transportation": "Flight from Andamans to Kolkata",
-            "linkedEventDate": "February 23"
+            "linkedEventDate": "February 23",
+            "image": "images/dakhineswar-temple.jpeg"
             },
             {
             "date": "February 24",
@@ -117,7 +125,8 @@
             "evening": "Dinner at Qla, a romantic night under Delhi’s starlit sky.",
             "lodging": "Ambassador Hotel",
             "transportation": "Local transport in Delhi",
-            "linkedEventDate": "February 24"
+            "linkedEventDate": "February 24",
+            "image": "/images/qutub-minar.jpg"
             },
             {
             "date": "February 25",
@@ -128,40 +137,44 @@
             "evening": "A quiet dinner, reflecting on the journey so far.",
             "lodging": "Ambassador Hotel",
             "transportation": "Local transport in Delhi",
-            "linkedEventDate": "February 25"
+            "linkedEventDate": "February 25",
+            "image": "/images/jaipur-pink.jpg"
             },
             {
             "date": "February 26",
-            "day": 13,
-            "title": "Agra Adventure with Ishan",
+            "day": 2,
+            "title": "Agra Adventure",
             "morning": "Train ride aboard the 12050 Gatimaan Express, heading to Agra.",
             "afternoon": "Standing before the breathtaking Taj Mahal, followed by an exploration of Agra Fort & Mehtab Bagh.",
             "evening": "Check-in at Aman Homestay, a cozy night in the heart of Agra.",
             "lodging": "Aman Homestay - Boutique Hotel",
             "transportation": "Train - 12050 Gatimaan Express",
-            "linkedEventDate": "February 26"
+            "linkedEventDate": "February 26",
+            "image": "/images/taj-mahal.jpg"
             },
             {
             "date": "February 27",
-            "day": 1,
+            "day": 3,
             "title": "Jaipur Adventure",
             "morning": "A scenic drive to Jaipur, the Pink City, where history and grandeur await.",
             "afternoon": "Exploring Hawa Mahal, City Palace, and the grandeur of Albert Hall Museum.",
             "evening": "A sunset photoshoot at Jantar Mantar and the breathtaking views from Nahargarh Fort.",
             "lodging": "Rawla Rawatsar",
             "transportation": "Private driver (Savaari) or Uber Intercity",
-            "linkedEventDate": "February 27"
+            "linkedEventDate": "February 27",
+            "image": "/images/jaipur-pink.jpg"
             },
             {
             "date": "February 28",
-            "day": 15,
-            "title": "Jaipur Shopping & Relaxation",
+            "day": 4,
+            "title": "Jaipur Exploration & Relaxation",
             "morning": "Wandering through Johari Bazaar, searching for treasures.",
             "afternoon": "Exploring Amer Fort, Panna Meena Ka Kund, and Jaigarh Fort.",
             "evening": "A royal dining experience at 1135 AD, a meal fit for kings and queens.",
             "lodging": "Rawla Rawatsar",
             "transportation": "Local transport in Jaipur",
-            "linkedEventDate": "February 28"
+            "linkedEventDate": "February 28",
+            "image": "/images/hall-of-mirrors.webp"
             },
             {
             "date": "March 1",
@@ -174,6 +187,6 @@
             "transportation": "Drive from Jaipur to Delhi",
             "linkedEventDate": "March 1"
             }
-            ]
+        ]
             
             
