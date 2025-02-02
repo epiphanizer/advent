@@ -20,10 +20,6 @@ let starfield = [];
 let fractalAngle = 0;
 let phrase = ''; // Variable to hold the current phrase
 
-// Load Bob Marley MIDI file
-const midi = new Audio('/public/bob-marley-song.mid'); // Replace with correct path to your Bob Marley MIDI
-midi.loop = true; // Loop the song
-
 function startGame() {
     canvasContainer.style.display = 'block'; // Show the game container
     document.querySelector('.calendar').style.display = 'none'; // Hide calendar
@@ -37,8 +33,6 @@ function startGame() {
     // Generate the initial starfield
     generateStarfield();
 
-    // Play Bob Marley song
-    midi.play();
 
     // Create enemies using cute alien emojis or image URLs
     for (let i = 0; i < 5; i++) {
@@ -141,7 +135,7 @@ function gameLoop() {
     if (phrase) {
         ctx.font = '30px "Poppins", sans-serif';
         ctx.fillStyle = '#ff1493';
-        ctx.fillText(phrase, canvas.width + 50, canvas.height / 4);  // Phrase appears off screen
+        ctx.fillText(phrase, canvas.width - 200, canvas.height);  // Phrase appears off screen
     }
 
     requestAnimationFrame(gameLoop);
