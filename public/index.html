@@ -186,8 +186,7 @@
             </div>
         </div>
     </div>
-
-    <!-- Event Details Modal -->
+<!-- Event Details Modal -->
 <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -196,6 +195,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <h6>📅 Trip Day: <span class="trip-day"></span></h6>
                 <div class="trivia-recap"></div>
                 <img class="event-image img-fluid mb-3" alt="Event Image">
                 
@@ -217,6 +217,7 @@
         </div>
     </div>
 </div>
+
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -272,7 +273,8 @@
             function showEventDetails(eventDate, rule) {
                 const event = events.find(e => e.date === eventDate);
                 if (event) {
-                    $(".modal-title").text(event.title);
+                    $(".modal-title").text(`Day ${event.day}: ${event.title}`);
+                    $(".trip-day").text(event.day);
                     $(".event-image").attr("src", event.image || "default-event.jpg"); // Use a default image if none provided
                     $(".morning-details").html(event.morning || "No morning details available.");
                     $(".afternoon-details").html(event.afternoon || "No afternoon details available.");
@@ -305,13 +307,18 @@
                         const unlockDate = new Date(year, month, i);
                         const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true";
                         const isUnlocked = isFirstDay || unlocked || (today >= unlockDate);
+                        const linkedEvent = events.find(e => e.day === i);
+                        const linkedDateText = linkedEvent && isUnlocked ? `<div class="linked-date">(${linkedEvent.linkedEventDate})</div>` : '';
 
                         const dayDiv = $(`
                             <div class="day ${isUnlocked ? '' : 'locked'}" data-day="${i}">
                                 <i class="fa-solid fa-heart"></i> February ${ordinalSuffix(i)}
+                                ${linkedDateText}
                                 <div class="lock-hover">🔒 Locked</div>
                             </div>
                         `);
+
+
                         $(".calendar").append(dayDiv);
                     });
 

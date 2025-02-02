@@ -1,17 +1,10 @@
 [
     {
-        "day": 12,
-        "question": "Which city is famous for the Golden Gate Bridge?",
-        "options": ["San Francisco", "Los Angeles", "Chicago", "New York"],
-        "answer": "San Francisco",
-        "linkedEventDate": "February 13"
-    },
-    {
         "day": 13,
         "question": "Where can you find colorful Victorian houses known as 'The Painted Ladies'?",
         "options": ["Alamo Square", "Pacific Heights", "Castro", "SOMA"],
         "answer": "Alamo Square",
-        "linkedEventDate": "February 14"
+        "linkedEventDate": "February 13"
     },
     {
         "day": 14,
@@ -22,11 +15,11 @@
     },
     {
         "day": 4,
-        "question": "What is the name of the market known for rooftop cafes and boutique shopping in Delhi?",
-        "options": ["Khan Market", "Chandni Chowk", "Sarojini Nagar", "Lajpat Nagar"],
-        "answer": "Khan Market",
+        "question": "Which Mughal-era monument in Delhi is a UNESCO World Heritage Site and inspired the design of the Taj Mahal?",
+        "options": ["Humayun's Tomb", "Qutub Minar", "Red Fort", "Lotus Temple"],
+        "answer": "Humayun's Tomb",
         "linkedEventDate": "February 17"
-    },
+    },    
     {
         "day": 1,
         "question": "Which Delhi monument, shaped like an arch, honors fallen soldiers?",
@@ -56,25 +49,25 @@
         "linkedEventDate": "February 22"
     },
     {
-        "day": 5,
+        "day": 2,
         "question": "Which city is home to the Taj Mahal?",
         "options": ["Agra", "Jaipur", "Delhi", "Varanasi"],
         "answer": "Agra",
         "linkedEventDate": "February 26"
     },
     {
-        "day": 10,
+        "day": 6,
         "question": "Which Jaipur fort features the Hall of Mirrors?",
         "options": ["Amber Fort", "Mehrangarh Fort", "Agra Fort", "Nahargarh Fort"],
         "answer": "Amber Fort",
         "linkedEventDate": "February 28"
     },
     {
-        "day": 11,
-        "question": "Where can you shop for traditional Rajasthani textiles and jewelry in Jaipur?",
-        "options": ["Johari Bazaar", "Sarojini Market", "Connaught Place", "Lajpat Nagar"],
-        "answer": "Johari Bazaar",
-        "linkedEventDate": "February 28"
+        "day": 1,
+        "question": "What city is called the Pink City?",
+        "options": ["Jaipur", "Mumbai", "Kolkata", "Lajpat Nagar"],
+        "answer": "Jaipur",
+        "linkedEventDate": "February 27"
     },
     {
         "day": 12,
