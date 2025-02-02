@@ -1,121 +1,99 @@
 [
     {
-        "date": "February 13",
-        "day": 1,
-        "title": "Arrival in San Francisco",
-        "event": "Meet at Airport, Check-in at The Metro Hotel, Dinner at Nopa, Drinks & Live Music at Madrone Art Bar",
-        "linkedEventDate": "Feb 13"
+    "date": "February 13",
+    "day": 1,
+    "title": "Arrival in San Francisco",
+    "event": "Meet at Airport, Check-in at The Metro Hotel, Dinner at Nopa, Drinks & Live Music at Madrone Art Bar",
+    "lodging": "The Metro Hotel, 319 Divisadero Street, 3-star, Check-in 3:00 PM, Check-out Feb 15 before 11:00 AM",
+    "transportation": "Flight to San Francisco",
+    "linkedEventDate": "February 13"
     },
     {
-        "date": "February 14",
-        "day": 2,
-        "title": "Exploring San Francisco",
-        "event": "Walk through Panhandle Park, Tea at the Japanese Tea Garden, Picnic at Shakespeare Garden, Miniature Golf & Sundaes at Ghirardelli Square, Golden Gate Bridge visit, Dinner & Nightcap at Bourbon & Branch",
-        "linkedEventDate": "Feb 14"
+    "date": "February 14",
+    "day": 2,
+    "title": "Exploring San Francisco",
+    "event": "Walk through Panhandle Park, Tea at the Japanese Tea Garden, Picnic at Shakespeare Garden, Miniature Golf & Sundaes at Ghirardelli Square, Golden Gate Bridge visit, Dinner & Nightcap at Bourbon & Branch",
+    "lodging": "The Metro Hotel",
+    "transportation": "Local transport in San Francisco",
+    "linkedEventDate": "February 14"
     },
     {
-        "date": "February 15",
-        "day": 3,
-        "title": "Travel Day",
-        "event": "Check out of The Metro Hotel, Airport Lounge Drinks, Flight to Delhi",
-        "linkedEventDate": "Feb 15"
+    "date": "February 15",
+    "day": 3,
+    "title": "Travel Day",
+    "event": "Check out of The Metro Hotel, Airport Lounge Drinks, Flight to Delhi",
+    "transportation": "Flight from San Francisco to Delhi",
+    "linkedEventDate": "February 15"
     },
     {
-        "date": "February 17",
-        "day": 4,
-        "title": "Arrival & Delhi Exploration",
-        "event": "Check-in at Nizza East, Breakfast at Turtle Cafe, Sunder Nursery & Humayun's Tomb, Check-in at Ambassador Hotel, Drinks & Food at Khan Market, Visit Deer Park & Hauz Khas, Explore Humayunpur, Live Jazz at The Piano Man",
-        "linkedEventDate": "Feb 17"
+    "date": "February 17",
+    "day": 4,
+    "title": "Arrival & Delhi Exploration",
+    "event": "Check-in at Nizza East, Breakfast at Turtle Cafe, Sunder Nursery & Humayun's Tomb, Check-in at Ambassador Hotel, Drinks & Food at Khan Market, Visit Deer Park & Hauz Khas, Explore Humayunpur, Live Jazz at The Piano Man",
+    "lodging": "Nizza East (Airbnb) morning stay, Ambassador Hotel (Taj) check-in at 2:00 PM",
+    "transportation": "Airport transfer to Nizza East",
+    "linkedEventDate": "February 17"
     },
     {
-        "date": "February 18",
-        "day": 5,
-        "title": "Delhi Day Out",
-        "event": "Visit Lodhi Garden, Lunch at Dos in Lodhi Market, Explore National Handicrafts & Handloom Museum or Mehrauli Archaeological Park, Shopping at Khan Market or Connaught Place, Walk past India Gate, Visit Sahil, Vasundra & Family",
-        "linkedEventDate": "Feb 18"
+    "date": "February 18",
+    "day": 5,
+    "title": "Delhi Day Out",
+    "event": "Visit Lodhi Garden, Lunch at Dos in Lodhi Market, Explore National Handicrafts & Handloom Museum or Mehrauli Archaeological Park, Shopping at Khan Market or Connaught Place, Walk past India Gate, Visit Sahil, Vasundra & Family",
+    "lodging": "Ambassador Hotel",
+    "transportation": "Local transport in Delhi",
+    "linkedEventDate": "February 18"
     },
     {
-        "date": "February 19",
-        "day": 6,
-        "title": "Arrival in Andamans",
-        "event": "Flight to Andamans, Check-in at Munjoh Ocean Resort, Relax on the beach, Enjoy fresh seafood, Unwind in paradise",
-        "linkedEventDate": "Feb 19"
+    "date": "February 19",
+    "day": 6,
+    "title": "Arrival in Andamans",
+    "event": "Flight to Andamans, Check-in at Munjoh Ocean Resort, Relax on the beach, Enjoy fresh seafood, Unwind in paradise",
+    "lodging": "Munjoh Ocean Resort - Havelock Island",
+    "transportation": "Flight to Port Blair, ferry to Havelock Island",
+    "linkedEventDate": "February 19"
     },
     {
-        "date": "February 20",
-        "day": 7,
-        "title": "Scuba Diving & Sunset Walks",
-        "event": "Scuba diving at Nemo Reef, Long walk at Radhanagar Beach, Candlelight dinner by the beach, Slow dance under the stars",
-        "linkedEventDate": "Feb 20"
+    "date": "February 20",
+    "day": 7,
+    "title": "Scuba Diving & Sunset Walks",
+    "event": "Scuba diving at Nemo Reef, Long walk at Radhanagar Beach, Candlelight dinner by the beach, Slow dance under the stars",
+    "lodging": "Munjoh Ocean Resort",
+    "transportation": "Local island transport",
+    "linkedEventDate": "February 20"
     },
     {
-        "date": "February 21",
-        "day": 8,
-        "title": "Beach Day & Egg Rolls",
-        "event": "Leisurely morning at Beach No. 5, Try Andaman-style egg rolls, Explore nearby villages, Sunset at Kalapathar Beach",
-        "linkedEventDate": "Feb 21"
+    "date": "February 23",
+    "day": 10,
+    "title": "Return from Andamans",
+    "event": "Fly back from Andamans, Kolkata Layover - Visit Kalighat Temple, Check-in at hotel and relax",
+    "lodging": "Hotel in Kolkata (TBD)",
+    "transportation": "Flight from Andamans to Kolkata",
+    "linkedEventDate": "February 23"
     },
     {
-        "date": "February 22",
-        "day": 9,
-        "title": "Love & Adventure",
-        "event": "Private boat ride to Elephant Beach, Snorkeling and fun in the water, Spa treatment, Afternoon nap, Romantic evening at the villa",
-        "linkedEventDate": "Feb 22"
+    "date": "February 26",
+    "day": 13,
+    "title": "Agra Adventure with Ishan",
+    "event": "Train to Agra, Visit Taj Mahal, Explore Agra Fort & Mehtab Bagh, Check-in at Aman Homestay",
+    "lodging": "Aman Homestay - Boutique Hotel",
+    "transportation": "Train - 12050 Gatimaan Express",
+    "linkedEventDate": "February 26"
     },
     {
-        "date": "February 23",
-        "day": 10,
-        "title": "Return from Andamans",
-        "event": "Fly back from Andamans, Kolkata Layover - Visit Kalighat Temple, Check-in at hotel and relax",
-        "linkedEventDate": "Feb 23"
+    "date": "February 27",
+    "day": 14,
+    "title": "Jaipur Adventure",
+    "event": "Travel to Jaipur, Visit Hawa Mahal, Explore City Palace & Museum, Stop by Albert Hall Museum, Jantar Mantar & Photoshoot, Sunset at Nahargarh Fort",
+    "lodging": "Rawla Rawatsar",
+    "transportation": "Private driver (Savaari) or Uber Intercity",
+    "linkedEventDate": "February 27"
     },
     {
-        "date": "February 24",
-        "day": 11,
-        "title": "Business & Shopping",
-        "event": "Sync up with Co-Dx People, Dinner at Qla, Visit Qutab Minar",
-        "linkedEventDate": "Feb 24"
-    },
-    {
-        "date": "February 25",
-        "day": 12,
-        "title": "Biotech & Networking",
-        "event": "Introduce Co-Dx to Sahil & Harkaran, Megan joins for Biotech Exploration",
-        "linkedEventDate": "Feb 25"
-    },
-    {
-        "date": "February 26",
-        "day": 13,
-        "title": "Agra Adventure with Ishan",
-        "event": "Train to Agra, Visit Taj Mahal, Explore Agra Fort & Mehtab Bagh, Check-in at Aman Homestay",
-        "linkedEventDate": "Feb 26"
-    },
-    {
-        "date": "February 27",
-        "day": 14,
-        "title": "Jaipur Adventure",
-        "event": "Travel to Jaipur, Visit Hawa Mahal, Explore City Palace & Museum, Stop by Albert Hall Museum, Jantar Mantar & Photoshoot, Sunset at Nahargarh Fort",
-        "linkedEventDate": "Feb 27"
-    },
-    {
-        "date": "February 28",
-        "day": 15,
-        "title": "Jaipur Shopping & Relaxation",
-        "event": "Shopping at Jaipur markets, Explore Amer Fort, Visit Panna Meena Ka Kund, Stop at Jaigarh Fort, Dinner at 1135 AD",
-        "linkedEventDate": "Feb 28"
-    },
-    {
-        "date": "March 1",
-        "day": 16,
-        "title": "Return to Delhi",
-        "event": "Drive from Jaipur to Delhi, Buy a Sitar, Get souvenirs from Khan Market or Dilli Haat",
-        "linkedEventDate": "Mar 1"
-    },
-    {
-        "date": "March 2",
-        "day": 17,
-        "title": "Flight Back to LAX",
-        "event": "Board flight home, Reflect on the journey, Whisper 'This is only the beginning.'",
-        "linkedEventDate": "Mar 2"
+    "date": "March 2",
+    "day": 17,
+    "title": "Flight Back to LAX",
+    "event": "Board flight home, Reflect on the journey, Whisper 'This is only the beginning.'",
+    "transportation": "Flight to LAX",
+    "linkedEventDate": "March 2"
     }
-]
+    ]

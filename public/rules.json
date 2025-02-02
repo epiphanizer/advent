@@ -1,80 +1,80 @@
 [
     {
-        "day": 1,
+        "day": 12,
         "question": "Which city is famous for the Golden Gate Bridge?",
         "options": ["San Francisco", "Los Angeles", "Chicago", "New York"],
         "answer": "San Francisco",
-        "linkedEventDate": "Feb 13"
+        "linkedEventDate": "February 13"
     },
     {
-        "day": 2,
+        "day": 13,
         "question": "Where can you find colorful Victorian houses known as 'The Painted Ladies'?",
         "options": ["Alamo Square", "Pacific Heights", "Castro", "SOMA"],
         "answer": "Alamo Square",
-        "linkedEventDate": "Feb 14"
+        "linkedEventDate": "February 14"
     },
     {
-        "day": 3,
+        "day": 14,
         "question": "Which San Francisco park has a famous Japanese Tea Garden?",
         "options": ["Golden Gate Park", "Dolores Park", "Presidio", "Twin Peaks"],
         "answer": "Golden Gate Park",
-        "linkedEventDate": "Feb 14"
+        "linkedEventDate": "February 14"
     },
     {
         "day": 4,
         "question": "What is the name of the market known for rooftop cafes and boutique shopping in Delhi?",
         "options": ["Khan Market", "Chandni Chowk", "Sarojini Nagar", "Lajpat Nagar"],
         "answer": "Khan Market",
-        "linkedEventDate": "Feb 17"
+        "linkedEventDate": "February 17"
     },
     {
-        "day": 5,
+        "day": 1,
         "question": "Which Delhi monument, shaped like an arch, honors fallen soldiers?",
         "options": ["India Gate", "Red Fort", "Qutub Minar", "Lotus Temple"],
         "answer": "India Gate",
-        "linkedEventDate": "Feb 18"
+        "linkedEventDate": "February 18"
     },
     {
-        "day": 6,
+        "day": 2,
         "question": "Which Indian island is known for beautiful beaches and scuba diving?",
-        "options": ["Havelock Island", "Goa", "Lakshadweep", "Andaman Island"],
+        "options": ["Havelock Island", "Goa", "Lakshadweep", "Chennai"],
         "answer": "Havelock Island",
-        "linkedEventDate": "Feb 19"
+        "linkedEventDate": "February 19"
     },
     {
         "day": 7,
         "question": "Which beach in the Andamans is famous for its stunning sunsets?",
         "options": ["Radhanagar Beach", "Kalapathar Beach", "Elephant Beach", "Neil Island Beach"],
         "answer": "Radhanagar Beach",
-        "linkedEventDate": "Feb 20"
+        "linkedEventDate": "February 20"
     },
     {
         "day": 8,
         "question": "Where in the Andamans can you experience snorkeling and clear blue waters?",
         "options": ["Elephant Beach", "Wandoor Beach", "Sitapur Beach", "Kala Pathar Beach"],
         "answer": "Elephant Beach",
-        "linkedEventDate": "Feb 22"
+        "linkedEventDate": "February 22"
     },
     {
-        "day": 9,
+        "day": 5,
         "question": "Which city is home to the Taj Mahal?",
         "options": ["Agra", "Jaipur", "Delhi", "Varanasi"],
         "answer": "Agra",
-        "linkedEventDate": "Feb 26"
+        "linkedEventDate": "February 26"
     },
     {
         "day": 10,
         "question": "Which Jaipur fort features the Hall of Mirrors?",
         "options": ["Amber Fort", "Mehrangarh Fort", "Agra Fort", "Nahargarh Fort"],
         "answer": "Amber Fort",
-        "linkedEventDate": "Feb 28"
+        "linkedEventDate": "February 28"
     },
     {
         "day": 11,
         "question": "Where can you shop for traditional Rajasthani textiles and jewelry in Jaipur?",
         "options": ["Johari Bazaar", "Sarojini Market", "Connaught Place", "Lajpat Nagar"],
         "answer": "Johari Bazaar",
-        "linkedEventDate": "Feb 28"
+        "linkedEventDate": "February 28"
     },
     {
         "day": 12,
@@ -88,14 +88,14 @@
         "question": "What famous market in Jaipur is known for handicrafts and textiles?",
         "options": ["Tripolia Bazaar", "Bapu Bazaar", "Johari Bazaar", "Chandpole Bazaar"],
         "answer": "Bapu Bazaar",
-        "linkedEventDate": "Feb 28"
+        "linkedEventDate": "February 28"
     },
     {
         "day": 14,
         "question": "Which market in Jaipur is famous for selling jewelry?",
         "options": ["Johari Bazaar", "Chandpole Bazaar", "Tripolia Bazaar", "Bapu Bazaar"],
         "answer": "Johari Bazaar",
-        "linkedEventDate": "Feb 28"
+        "linkedEventDate": "February 28"
     }
 ]
 

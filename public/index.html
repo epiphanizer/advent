@@ -188,23 +188,35 @@
     </div>
 
     <!-- Event Details Modal -->
-    <div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="trivia-recap"></div>
-                    <img class="event-image" alt="Event Image">
-                    <p class="event-details"></p>
-                    <textarea class="form-control favorite-memory-input" placeholder="Write your favorite memory..." rows="3"></textarea>
-                    <button class="btn btn-success save-memory mt-3">Save Memory</button>
-                </div>
+<div class="modal fade" id="eventModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="trivia-recap"></div>
+                <img class="event-image img-fluid mb-3" alt="Event Image">
+                
+                <h6>🌅 Morning</h6>
+                <p class="morning-details"></p>
+
+                <h6>🌞 Afternoon</h6>
+                <p class="afternoon-details"></p>
+
+                <h6>🌙 Evening</h6>
+                <p class="evening-details"></p>
+
+                <h6>🏨 Lodging</h6>
+                <p class="lodging-details"></p>
+
+                <h6>🚗 Transportation</h6>
+                <p class="transportation-details"></p>
             </div>
         </div>
     </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -235,7 +247,6 @@
                         <button class="btn btn-outline-primary m-2 choice-option">${options[index]}. ${option}</button>
                     `);
                 });
-
                 $(".choice-option").off().click(function () {
                     const selectedOption = $(this).text().substring(3);
                     if (selectedOption === rule.answer) {
@@ -244,8 +255,13 @@
                         $("#score").text(score);
                         $(`[data-day=${rule.day}]`).addClass("solved");
                         localStorage.setItem(`day${rule.day}-unlocked`, "true");
+
                         $("#puzzleModal").modal("hide");
-                        showEventDetails(rule.linkedEventDate, rule);
+
+                        // Add a short delay before showing the event details modal
+                        setTimeout(() => {
+                            showEventDetails(rule.linkedEventDate, rule);
+                        }, 1000); // 1 second delay to allow confetti animation to finish
                     } else {
                         wrongGuesses++;
                         $("#wrong-guesses").text(wrongGuesses);
@@ -253,23 +269,27 @@
                     }
                 });
             }
-
             function showEventDetails(eventDate, rule) {
                 const event = events.find(e => e.date === eventDate);
                 if (event) {
                     $(".modal-title").text(event.title);
-                    $(".event-image").attr("src", event.image);
-                    $(".event-details").html(event.details);
+                    $(".event-image").attr("src", event.image || "default-event.jpg"); // Use a default image if none provided
+                    $(".morning-details").html(event.morning || "No morning details available.");
+                    $(".afternoon-details").html(event.afternoon || "No afternoon details available.");
+                    $(".evening-details").html(event.evening || "No evening details available.");
+                    $(".lodging-details").html(event.lodging || "No lodging details available.");
+                    $(".transportation-details").html(event.transportation || "No transportation details available.");
+
                     $(".trivia-recap").html(`
                         <strong>Trivia Recap:</strong> <br>
                         Question: "${rule.question}" <br>
                         Answer: "${rule.answer}"
                     `);
-                    const memoryKey = `${eventDate}-memory`;
-                    $(".favorite-memory-input").val(localStorage.getItem(memoryKey) || "");
+
                     $("#eventModal").modal("show");
                 }
             }
+
 
             $(document).ready(function () {
                 Promise.all([
