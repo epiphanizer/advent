@@ -1,11 +1,12 @@
 [
     {
-        "day": 1,
-        "question": "Which special moment marks the beginning of our adventure together?",
-        "options": ["Boarding our flight to Delhi", "Checking into the hotel", "Exploring a new city", "Trying a new dish"],
-        "answer": "Boarding our flight to Delhi",
-        "linkedEventDate": "February 15"
+    "day": 1,
+    "question": "What drink will we be thinking about in the airport lounge, even if it's off-limits before our flight?",
+    "options": ["Blue Moon", "Old Fashioned", "Negroni", "Champagne"],
+    "answer": "Blue Moon",
+    "linkedEventDate": "February 15"
     },
+    
     {
         "day": 2,
         "question": "What incredible wonder of the world will we see in Agra?",
@@ -64,11 +65,11 @@
     },
     {
         "day": 10,
-        "question": "What famous market in Jaipur is known for its stunning handicrafts and textiles?",
-        "options": ["Bapu Bazaar", "Tripolia Bazaar", "Johari Bazaar", "Chandpole Bazaar"],
-        "answer": "Bapu Bazaar",
-        "linkedEventDate": "February 28"
-    },
+        "question": "Which towering Delhi landmark was built to celebrate a great victory and remains one of India's tallest minarets?",
+        "options": ["Qutub Minar", "India Gate", "Red Fort", "Jama Masjid"],
+        "answer": "Qutub Minar",
+        "linkedEventDate": "February 24"
+        },
     {
         "day": 11,
         "question": "Where in Jaipur will we find the grand palace of mirrors, a sight fit for royalty?",
