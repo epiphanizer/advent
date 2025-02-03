@@ -313,7 +313,7 @@
                     const daysArray = Array.from({ length: 14 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
                     daysArray.forEach((i) => {
                         const isFirstDay = i === 1;
-                        const unlockDate = new Date(year, month, i);
+                        const unlockDate = new Date(year, 3, 2);
                         const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true"; // ✅ Only true when trivia is solved
                         const isUnlocked = isFirstDay || unlocked || (today >= unlockDate); // ✅ Unlocked if first day, trivia solved, or date has passed
                         const linkedEvent = events.find(e => e.day === i);
