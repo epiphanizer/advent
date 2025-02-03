@@ -91,7 +91,7 @@
     "lodging": "Ambassador Hotel",
     "transportation": "Local transport in Delhi",
     "linkedEventDate": "February 18",
-    "image": "/images/india-gate.jpg"
+    "image": "/images/lodhi-garden.jpg"
     },
     {
     "date": "February 19",
@@ -164,7 +164,21 @@
             "transportation": "Local transport in Delhi",
             "linkedEventDate": "February 24",
             "image": "/images/qutub-minar.jpg"
+            },
+            {
+                "date": "Mar 1",
+                "day": 15,
+                "title": "The Journey Home",
+                "morning": "Grabbing breakfast & driving back from Jaipur to Delhi",
+                "afternoon": "A final stroll through Dilli Haat, picking up last-minute souvenirs and enjoying regional delicacies.",
+                "evening": "Heading to Indira Gandhi International Airport, reminiscing about an unforgettable trip.",
+                "night": "Boarding the flight home, carrying memories of Delhi’s vibrant culture and rich history.",
+                "lodging": "In transit – overnight flight... re-working bong tour, ready to dream of the next adventure.",
+                "transportation": "Local transport in Delhi to the airport, followed by an international flight home.",
+                "linkedEventDate": "Mar 1",
+                "image": "/images/dilli-haat.jpg"
             }
+            
         ]
             
             
