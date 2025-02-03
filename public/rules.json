@@ -36,35 +36,35 @@
         "linkedEventDate": "February 18"
     },
     {
-        "day": 6,
+        "day": 7,
         "question": "Which Indian island paradise is known for its crystal-clear waters and sandy beaches?",
         "options": ["Havelock Island", "Goa", "Lakshadweep", "Kanyakumari"],
         "answer": "Havelock Island",
         "linkedEventDate": "February 19"
     },
     {
-        "day": 7,
+        "day": 8,
         "question": "Where will we find one of the most romantic sunset beaches in the world?",
         "options": ["Radhanagar Beach", "Miami Beach", "Copacabana", "Bondi Beach"],
         "answer": "Radhanagar Beach",
         "linkedEventDate": "February 20"
     },
     {
-        "day": 8,
+        "day": 9,
         "question": "Where will we go snorkeling in the Andamans, discovering colorful marine life?",
         "options": ["Wandoor Beach", "Neil Island", "Elephant Beach", "Marina Beach"],
         "answer": "Elephant Beach",
         "linkedEventDate": "February 22"
     },
     {
-        "day": 9,
+        "day": 10,
         "question": "Which city is famous for its Kali temples?",
         "options": ["Mumbai", "Kolkata", "Bangalore", "Pune"],
         "answer": "Kolkata",
         "linkedEventDate": "February 23"
     },
     {
-        "day": 10,
+        "day": 6,
         "question": "Which towering Delhi landmark was built to celebrate a great victory and remains one of India's tallest minarets?",
         "options": ["India Gate", "Red Fort", "Jama Masjid","Qutub Minar"],
         "answer": "Qutub Minar",
@@ -82,7 +82,7 @@
         "question": "Which vibrant open-air market in Delhi offers a rich blend of handicrafts, culture, and street food from across India?",
         "options": ["Chandni Chowk", "Dilli Haat", "Janpath Market", "Sarojini Nagar"],
         "answer": "Dilli Haat",
-        "linkedEventDate": "Mar 1"
+        "linkedEventDate": "March 1"
     },
     
     {

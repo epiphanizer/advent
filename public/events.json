@@ -59,7 +59,7 @@
         },
         {
         "date": "February 28",
-        "day": 4,
+        "day": 11,
         "title": "Jaipur Exploration & Relaxation",
         "morning": "Wandering through Johari Bazaar, searching for treasures.",
         "afternoon": "Exploring Amer Fort, Panna Meena Ka Kund, and Jaigarh Fort.",
@@ -71,7 +71,7 @@
         },
     {
     "date": "February 17",
-    "day": 5,
+    "day": 4,
     "title": "A City Awakens",
     "morning": "A quiet arrival at Nizza East, where we rest before stepping into the hum of the city.",
     "afternoon": "A dreamy walk through Sunder Nursery & the timeless beauty of Humayun’s Tomb.",
@@ -83,7 +83,7 @@
     },
     {
     "date": "February 18",
-    "day": 6,
+    "day": 5,
     "title": "Lost in Time",
     "morning": "A golden morning in Lodhi Garden, fingers brushing, steps in sync.",
     "afternoon": "Lunch at Dos in Lodhi Market, wandering through the charm of Khan Market.",
@@ -91,7 +91,7 @@
     "lodging": "Ambassador Hotel",
     "transportation": "Local transport in Delhi",
     "linkedEventDate": "February 18",
-    "image": "/images/lodhi-garden.jpg"
+    "image": "/images/india-gate.jpg"
     },
     {
     "date": "February 19",
@@ -118,7 +118,7 @@
         "image": "/images/nemo-reef.jpeg"
         },
         {
-        "date": "February 21",
+        "date": "February 22",
         "day": 9,
         "title": "Sun-Kissed & Sweet",
         "morning": "Sunrise at Kalapathar Beach, a lazy breakfast by the shore",
@@ -126,24 +126,12 @@
         "evening": "We hold hands and watch the sunset at Beach No. 5.",
         "lodging": "Munjoh Ocean Resort - Havelock Island",
         "transportation": "Local island transport",
-        "linkedEventDate": "February 21",
+        "linkedEventDate": "February 22",
         "image": "/images/sunrise-kalapathar-beach-havelock.jpeg"
         },
-        {
-            "date": "February 22",
-            "day": 10,
-            "title": "A Day for Just Us",
-            "morning": "A private boat carries us to Elephant Beach, where we snorkel in crystal-clear waters, surrounded by vibrant marine life.",
-            "afternoon": "A return to our villa for a spa treatment, a long afternoon nap, and the sound of waves lulling us into relaxation.",
-            "evening": "Wine, ocean breeze, and the kind of night that lingers forever.",
-            "lodging": "Munjoh Ocean Resort - Havelock Island",
-            "transportation": "Local island transport",
-            "linkedEventDate": "February 22",
-            "image": "/images/elephant-beach.jpg"
-            },
             {
             "date": "February 23",
-            "day": 11,
+            "day": 10,
             "title": "Farewell to Paradise",
             "morning": "One last swim in the warm Andaman waters, a quiet breakfast under the palm trees.",
             "afternoon": "Flight back from Andamans, with a layover in Kolkata to visit the historic Kalighat Temple.",
@@ -155,7 +143,7 @@
             },
             {
             "date": "February 24",
-            "day": 12,
+            "day": 6,
             "title": "Business & Romance",
             "morning": "Syncing up with Co-Dx People, sharing ideas and inspiration.",
             "afternoon": "A visit to Qutab Minar, walking in the shadows of history.",
@@ -166,8 +154,8 @@
             "image": "/images/qutub-minar.jpg"
             },
             {
-                "date": "Mar 1",
-                "day": 15,
+                "date": "March 1",
+                "day": 12,
                 "title": "The Journey Home",
                 "morning": "Grabbing breakfast & driving back from Jaipur to Delhi",
                 "afternoon": "A final stroll through Dilli Haat, picking up last-minute souvenirs and enjoying regional delicacies.",
@@ -175,7 +163,7 @@
                 "night": "Boarding the flight home, carrying memories of Delhi’s vibrant culture and rich history.",
                 "lodging": "In transit – overnight flight... re-working bong tour, ready to dream of the next adventure.",
                 "transportation": "Local transport in Delhi to the airport, followed by an international flight home.",
-                "linkedEventDate": "Mar 1",
+                "linkedEventDate": "March 1",
                 "image": "/images/dilli-haat.jpg"
             }
             
