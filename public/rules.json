@@ -10,28 +10,28 @@
     {
         "day": 2,
         "question": "What incredible wonder of the world will we see in Agra?",
-        "options": ["The Taj Mahal", "The Great Wall", "The Eiffel Tower", "Machu Picchu"],
+        "options":  [ "Gol Gumbaz", "Bibi Ka Maqbara", "The Taj Mahal", "Fatehpur Sikri"],
         "answer": "The Taj Mahal",
         "linkedEventDate": "February 26"
     },
     {
         "day": 3,
         "question": "Which city is famously known as the Pink City?",
-        "options": ["Jaipur", "Delhi", "Mumbai", "Agra"],
+        "options": ["Delhi", "Jaipur",  "Mumbai", "Agra"],
         "answer": "Jaipur",
         "linkedEventDate": "February 27"
     },
     {
         "day": 4,
         "question": "Which breathtaking Mughal-era monument inspired the Taj Mahal?",
-        "options": ["Humayun's Tomb", "Red Fort", "Qutub Minar", "India Gate"],
+        "options": ["Red Fort", "Qutub Minar", "India Gate", "Humayun's Tomb"],
         "answer": "Humayun's Tomb",
         "linkedEventDate": "February 17"
     },
     {
         "day": 5,
         "question": "Which iconic landmark in Delhi honors fallen heroes?",
-        "options": ["India Gate", "Lotus Temple", "Gateway of India", "Amber Fort"],
+        "options": ["Lotus Temple", "India Gate",  "Gateway of India", "Amber Fort"],
         "answer": "India Gate",
         "linkedEventDate": "February 18"
     },
@@ -52,28 +52,28 @@
     {
         "day": 8,
         "question": "Where will we go snorkeling in the Andamans, discovering colorful marine life?",
-        "options": ["Elephant Beach", "Wandoor Beach", "Neil Island", "Marina Beach"],
+        "options": ["Wandoor Beach", "Neil Island", "Elephant Beach", "Marina Beach"],
         "answer": "Elephant Beach",
         "linkedEventDate": "February 22"
     },
     {
         "day": 9,
         "question": "Which Delhi shopping market is famous for its handmade crafts and souvenirs?",
-        "options": ["Dilli Haat", "Chandni Chowk", "Khan Market", "Paharganj"],
+        "options": ["Chandni Chowk", "Dilli Haat", "Khan Market", "Paharganj"],
         "answer": "Dilli Haat",
         "linkedEventDate": "March 1"
     },
     {
         "day": 10,
         "question": "Which towering Delhi landmark was built to celebrate a great victory and remains one of India's tallest minarets?",
-        "options": ["Qutub Minar", "India Gate", "Red Fort", "Jama Masjid"],
+        "options": ["India Gate", "Red Fort", "Jama Masjid","Qutub Minar"],
         "answer": "Qutub Minar",
         "linkedEventDate": "February 24"
         },
     {
         "day": 11,
         "question": "Where in Jaipur will we find the grand palace of mirrors, a sight fit for royalty?",
-        "options": ["Amber Fort", "Mehrangarh Fort", "Nahargarh Fort", "Agra Fort"],
+        "options": [ "Mehrangarh Fort", "Amber Fort", "Nahargarh Fort", "Agra Fort"],
         "answer": "Amber Fort",
         "linkedEventDate": "February 28"
     },
@@ -87,14 +87,14 @@
     {
         "day": 13,
         "question": "Where in San Francisco can we find colorful Victorian houses known as The Painted Ladies?",
-        "options": ["Alamo Square", "Pacific Heights", "Castro", "SOMA"],
+        "options": [ "Pacific Heights", "Alamo Square", "Castro", "SOMA"],
         "answer": "Alamo Square",
         "linkedEventDate": "February 13"
     },
     {
         "day": 14,
         "question": "Which San Francisco park is home to a stunning Japanese Tea Garden?",
-        "options": ["Golden Gate Park", "Dolores Park", "Presidio", "Twin Peaks"],
+        "options": ["Dolores Park", "Presidio","Golden Gate Park",  "Twin Peaks"],
         "answer": "Golden Gate Park",
         "linkedEventDate": "February 14"
     }
