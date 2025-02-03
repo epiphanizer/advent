@@ -32,6 +32,43 @@
     "linkedEventDate": "February 15",
     "image": "/images/jet-setting.webp"
     },
+
+    {
+        "date": "February 26",
+        "day": 2,
+        "title": "Agra Adventure",
+        "morning": "Train ride aboard the 12050 Gatimaan Express, heading to Agra.",
+        "afternoon": "Standing before the breathtaking Taj Mahal, followed by an exploration of Agra Fort & Mehtab Bagh.",
+        "evening": "Check-in at Aman Homestay, a cozy night in the heart of Agra.",
+        "lodging": "Aman Homestay - Boutique Hotel",
+        "transportation": "Train - 12050 Gatimaan Express",
+        "linkedEventDate": "February 26",
+        "image": "/images/taj-mahal.jpg"
+        },
+        {
+        "date": "February 27",
+        "day": 3,
+        "title": "Jaipur Adventure",
+        "morning": "A scenic drive to Jaipur, the Pink City, where history and grandeur await.",
+        "afternoon": "Exploring Hawa Mahal, City Palace, and the grandeur of Albert Hall Museum.",
+        "evening": "A sunset photoshoot at Jantar Mantar and the breathtaking views from Nahargarh Fort.",
+        "lodging": "Rawla Rawatsar",
+        "transportation": "Private driver (Savaari) or Uber Intercity",
+        "linkedEventDate": "February 27",
+        "image": "/images/jaipur-pink.jpg"
+        },
+        {
+        "date": "February 28",
+        "day": 4,
+        "title": "Jaipur Exploration & Relaxation",
+        "morning": "Wandering through Johari Bazaar, searching for treasures.",
+        "afternoon": "Exploring Amer Fort, Panna Meena Ka Kund, and Jaigarh Fort.",
+        "evening": "A royal dining experience at 1135 AD, a meal fit for kings and queens.",
+        "lodging": "Rawla Rawatsar",
+        "transportation": "Local transport in Jaipur",
+        "linkedEventDate": "February 28",
+        "image": "/images/hall-of-mirrors.webp"
+        }
     {
     "date": "February 17",
     "day": 5,
@@ -118,8 +155,8 @@
             },
             {
             "date": "February 24",
-            "day": 11,
-            "title": "Business & Shopping",
+            "day": 12,
+            "title": "Business & Romance",
             "morning": "Syncing up with Co-Dx People, sharing ideas and inspiration.",
             "afternoon": "A visit to Qutab Minar, walking in the shadows of history.",
             "evening": "Dinner at Qla, a romantic night under Delhi’s starlit sky.",
@@ -127,65 +164,6 @@
             "transportation": "Local transport in Delhi",
             "linkedEventDate": "February 24",
             "image": "/images/qutub-minar.jpg"
-            },
-            {
-            "date": "February 25",
-            "day": 12,
-            "title": "Biotech & Networking",
-            "morning": "Introducing Co-Dx to Sahil & Harkaran, a meeting of minds and futures.",
-            "afternoon": "Megan joins the adventure into biotech & technology, exploring the possibilities ahead.",
-            "evening": "A quiet dinner, reflecting on the journey so far.",
-            "lodging": "Ambassador Hotel",
-            "transportation": "Local transport in Delhi",
-            "linkedEventDate": "February 25",
-            "image": "/images/jaipur-pink.jpg"
-            },
-            {
-            "date": "February 26",
-            "day": 2,
-            "title": "Agra Adventure",
-            "morning": "Train ride aboard the 12050 Gatimaan Express, heading to Agra.",
-            "afternoon": "Standing before the breathtaking Taj Mahal, followed by an exploration of Agra Fort & Mehtab Bagh.",
-            "evening": "Check-in at Aman Homestay, a cozy night in the heart of Agra.",
-            "lodging": "Aman Homestay - Boutique Hotel",
-            "transportation": "Train - 12050 Gatimaan Express",
-            "linkedEventDate": "February 26",
-            "image": "/images/taj-mahal.jpg"
-            },
-            {
-            "date": "February 27",
-            "day": 3,
-            "title": "Jaipur Adventure",
-            "morning": "A scenic drive to Jaipur, the Pink City, where history and grandeur await.",
-            "afternoon": "Exploring Hawa Mahal, City Palace, and the grandeur of Albert Hall Museum.",
-            "evening": "A sunset photoshoot at Jantar Mantar and the breathtaking views from Nahargarh Fort.",
-            "lodging": "Rawla Rawatsar",
-            "transportation": "Private driver (Savaari) or Uber Intercity",
-            "linkedEventDate": "February 27",
-            "image": "/images/jaipur-pink.jpg"
-            },
-            {
-            "date": "February 28",
-            "day": 4,
-            "title": "Jaipur Exploration & Relaxation",
-            "morning": "Wandering through Johari Bazaar, searching for treasures.",
-            "afternoon": "Exploring Amer Fort, Panna Meena Ka Kund, and Jaigarh Fort.",
-            "evening": "A royal dining experience at 1135 AD, a meal fit for kings and queens.",
-            "lodging": "Rawla Rawatsar",
-            "transportation": "Local transport in Jaipur",
-            "linkedEventDate": "February 28",
-            "image": "/images/hall-of-mirrors.webp"
-            },
-            {
-            "date": "March 1",
-            "day": 16,
-            "title": "The Final Chapter in India",
-            "morning": "A quiet morning, savoring chai as the city wakes around us.",
-            "afternoon": "Shopping for treasures—a sitar, a handful of souvenirs, something to carry home but leave a piece of us behind.",
-            "evening": "One last dinner, soaking in the final night, holding onto the magic before we go.",
-            "lodging": "Ambassador Hotel",
-            "transportation": "Drive from Jaipur to Delhi",
-            "linkedEventDate": "March 1"
             }
         ]
             
