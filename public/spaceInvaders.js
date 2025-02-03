@@ -2,6 +2,8 @@
 const canvasContainer = document.querySelector('.canvas-container');
 const canvas = document.getElementById('spaceInvadersCanvas');
 const ctx = canvas.getContext('2d');
+const heartImage = new Image();
+heartImage.src = '/images/heart.webp';  // Path to the new heart image
 
 let player, bullets, enemies, score = 0;
 let isGameRunning = false;
@@ -23,8 +25,9 @@ let phrase = ''; // Variable to hold the current phrase
 function startGame() {
     canvasContainer.style.display = 'block'; // Show the game container
     document.querySelector('.calendar').style.display = 'none'; // Hide calendar
+    player = { x: canvas.width / 2 - playerWidth / 2, y: canvas.height - 70, width: playerWidth, height: playerHeight, speed: 14 };
 
-    player = { x: canvas.width / 2 - playerWidth / 2, y: canvas.height - 70, width: playerWidth, height: playerHeight, speed: 8 }; // Increased speed
+
     bullets = [];
     enemies = [];
     score = 0;
@@ -131,12 +134,6 @@ function gameLoop() {
     ctx.font = '20px "Poppins", sans-serif';
     ctx.fillText(`Score: ${score}`, 20, 30);
 
-    // Display motivational phrase
-    if (phrase) {
-        ctx.font = '30px "Poppins", sans-serif';
-        ctx.fillStyle = '#ff1493';
-        ctx.fillText(phrase, canvas.width - 200, canvas.height);  // Phrase appears off screen
-    }
 
     requestAnimationFrame(gameLoop);
 }
@@ -155,15 +152,9 @@ function explodeAlien(x, y) {
 
 // Draw a heart shape for the laser (bullet)
 function drawHeart(x, y) {
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.arc(x - 7, y, 7, 0, Math.PI, false); // Left circle of the heart
-    ctx.arc(x + 7, y, 7, 0, Math.PI, false); // Right circle of the heart
-    ctx.lineTo(x, y + 10); // Bottom tip of the heart
-    ctx.closePath();
-    ctx.fillStyle = '#FF1493'; // Hot pink for the heart laser
-    ctx.fill();
+    ctx.drawImage(heartImage, x - 18, y - 18, 64, 64);  // Increased size from 24x24 to 36x36
 }
+
 
 // Random color for the psychedelic explosion
 function getRandomColor() {
@@ -223,9 +214,7 @@ function generateStarfield() {
             speedY: Math.random() * 1 - 0.5,
         });
     }
-}
-
-// Function to show a random motivational phrase
+}// Function to show a random motivational phrase
 function showMotivationalPhrase() {
     const phrases = [
         "You're saving the world!",
@@ -233,11 +222,55 @@ function showMotivationalPhrase() {
         "One step closer to saving humanity!",
         "Love conquers all, including aliens!",
         "You're the best humanity has to offer!",
-        "The fate of the world rests in your hands!"
+        "The fate of the world rests in your hands!",
+        "You're Earth's last hope—make it count!",
+        "The galaxy cheers for you!",
+        "Every heart you fire brings love and victory!",
+        "No alien stands a chance against your courage!",
+        "Your heart is your greatest weapon!",
+        "They may have lasers, but we have love!",
+        "One more shot and the universe is safe!",
+        "You're fighting for love itself!",
+        "Even the aliens are impressed!",
+        "You're rewriting the history books!",
+        "Shoot with passion, save with love!"
     ];
 
     phrase = phrases[Math.floor(Math.random() * phrases.length)];
+    showPhraseOverlay(phrase);
 }
+// Function to display motivational phrases in an overlay
+function showPhraseOverlay(phrase) {
+    let phraseOverlay = document.getElementById("phrase-overlay");
+
+    if (!phraseOverlay) {
+        phraseOverlay = document.createElement("div");
+        phraseOverlay.id = "phrase-overlay";
+        phraseOverlay.style.position = "absolute";
+        phraseOverlay.style.bottom = "20px";
+        phraseOverlay.style.left = "50%";
+        phraseOverlay.style.transform = "translateX(-50%)";
+        phraseOverlay.style.padding = "10px 20px";
+        phraseOverlay.style.fontSize = "18px";
+        phraseOverlay.style.fontFamily = "'Poppins', sans-serif";
+        phraseOverlay.style.fontWeight = "bold";
+        phraseOverlay.style.color = "#ff1493";
+        phraseOverlay.style.background = "rgba(0, 0, 0, 0.8)";
+        phraseOverlay.style.borderRadius = "10px";
+        phraseOverlay.style.textAlign = "center";
+        phraseOverlay.style.zIndex = "1000";
+        document.body.appendChild(phraseOverlay);
+    }
+
+    phraseOverlay.innerText = phrase;
+
+    // Show phrase and fade out after 3 seconds
+    phraseOverlay.style.opacity = "1";
+    setTimeout(() => {
+        phraseOverlay.style.opacity = "0";
+    }, 5000);
+}
+
 
 function endGame(message) {
     isGameRunning = false;
