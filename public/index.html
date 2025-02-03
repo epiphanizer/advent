@@ -275,7 +275,7 @@
             function showEventDetails(eventDate, rule) {
                 const event = events.find(e => e.date === eventDate);
                 if (event) {
-                    $(".modal-title").text(`Day ${event.day}: ${event.title}`);
+                    $(".modal-title").text(`${event.title}`);
                     $(".trip-day").text(rule.linkedEventDate);
                     $(".event-image").attr("src", event.image || "default-event.jpg"); // Use a default image if none provided
                     $(".morning-details").html(event.morning || "No morning details available.");
@@ -313,7 +313,7 @@
                     const daysArray = Array.from({ length: 14 }, (_, i) => i + 1).sort(() => Math.random() - 0.5);
                     daysArray.forEach((i) => {
                         const isFirstDay = i === 1;
-                        const unlockDate = new Date(year, 3, 2);
+                        const unlockDate = new Date(year, month, i);
                         const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true"; // ✅ Only true when trivia is solved
                         const isUnlocked = isFirstDay || unlocked || (today >= unlockDate); // ✅ Unlocked if first day, trivia solved, or date has passed
                         const linkedEvent = events.find(e => e.day === i);
