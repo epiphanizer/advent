@@ -58,10 +58,10 @@
     },
     {
         "day": 9,
-        "question": "Which Delhi shopping market is famous for its handmade crafts and souvenirs?",
-        "options": ["Chandni Chowk", "Dilli Haat", "Khan Market", "Paharganj"],
-        "answer": "Dilli Haat",
-        "linkedEventDate": "March 1"
+        "question": "Which city is famous for its Kali temples?",
+        "options": ["Mumbai", "Kolkata", "Bangalore", "Pune"],
+        "answer": "Kolkata",
+        "linkedEventDate": "February 23"
     },
     {
         "day": 10,
@@ -79,11 +79,12 @@
     },
     {
         "day": 12,
-        "question": "Which beautiful Delhi monument will greet us with lush gardens and centuries of history?",
-        "options": ["Lodhi Garden", "Lotus Temple", "Humayun's Tomb", "Qutub Minar"],
-        "answer": "Lodhi Garden",
-        "linkedEventDate": "February 18"
+        "question": "Which vibrant open-air market in Delhi offers a rich blend of handicrafts, culture, and street food from across India?",
+        "options": ["Chandni Chowk", "Dilli Haat", "Janpath Market", "Sarojini Nagar"],
+        "answer": "Dilli Haat",
+        "linkedEventDate": "Mar 1"
     },
+    
     {
         "day": 13,
         "question": "Where in San Francisco can we find colorful Victorian houses known as The Painted Ladies?",
