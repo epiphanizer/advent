@@ -248,21 +248,22 @@
                         <button class="btn btn-outline-primary m-2 choice-option">${options[index]}. ${option}</button>
                     `);
                 });
+
                 $(".choice-option").off().click(function () {
                     const selectedOption = $(this).text().substring(3);
                     if (selectedOption === rule.answer) {
                         confetti({ particleCount: 200, spread: 120, origin: { y: 0.6 } });
                         score++;
+                        localStorage.setItem("triviaScore", score);  // Save trivia score
                         $("#score").text(score);
                         $(`[data-day=${rule.day}]`).addClass("solved");
                         localStorage.setItem(`day${rule.day}-unlocked`, "true");
 
                         $("#puzzleModal").modal("hide");
 
-                        // Add a short delay before showing the event details modal
                         setTimeout(() => {
                             showEventDetails(rule.linkedEventDate, rule);
-                        }, 1000); // 1 second delay to allow confetti animation to finish
+                        }, 1000);
                     } else {
                         wrongGuesses++;
                         $("#wrong-guesses").text(wrongGuesses);
@@ -270,6 +271,7 @@
                     }
                 });
             }
+
             function showEventDetails(eventDate, rule) {
                 const event = events.find(e => e.date === eventDate);
                 if (event) {
@@ -294,6 +296,13 @@
 
 
             $(document).ready(function () {
+                        
+                // Restore scores on page load
+                let savedTriviaScore = localStorage.getItem("triviaScore") || 0;
+                $("#score").text(savedTriviaScore);
+
+                let savedHighScore = localStorage.getItem("spaceInvadersHighScore") || 0;
+                console.log(`High Score: ${savedHighScore}`);
                 Promise.all([
                     fetch('events.json').then(res => res.json()),
                     fetch('rules.json').then(res => res.json())
@@ -356,6 +365,17 @@
                 });
             });
         })();
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedBackground = localStorage.getItem("backgroundGradient");
+            if (savedBackground) {
+                document.body.style.background = savedBackground;
+            }
+
+            // Save background when changed
+            setInterval(() => {
+                localStorage.setItem("backgroundGradient", getComputedStyle(document.body).background);
+            }, 5000);
+        });
     </script>
 </body>
 

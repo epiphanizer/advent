@@ -270,12 +270,17 @@ function showPhraseOverlay(phrase) {
         phraseOverlay.style.opacity = "0";
     }, 5000);
 }
-
-
 function endGame(message) {
     isGameRunning = false;
+
+    // Retrieve previous high score or set default to 0
+    let highScore = localStorage.getItem("spaceInvadersHighScore") || 0;
+    if (score > highScore) {
+        localStorage.setItem("spaceInvadersHighScore", score);
+    }
+
     setTimeout(() => {
-        alert(message);
+        alert(`${message}\nHigh Score: ${localStorage.getItem("spaceInvadersHighScore")}`);
         stopGame();
     }, 200);
 }
