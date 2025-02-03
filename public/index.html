@@ -314,23 +314,23 @@
                     daysArray.forEach((i) => {
                         const isFirstDay = i === 1;
                         const unlockDate = new Date(year, month, i);
-                        const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true";
-                        const isUnlocked = isFirstDay || unlocked || (today >= unlockDate);
+                        const unlocked = localStorage.getItem(`day${i}-unlocked`) === "true"; // ✅ Only true when trivia is solved
+                        const isUnlocked = isFirstDay || unlocked || (today >= unlockDate); // ✅ Unlocked if first day, trivia solved, or date has passed
                         const linkedEvent = events.find(e => e.day === i);
                         const linkedDateText = linkedEvent && isUnlocked ? `<div class="linked-date">(${linkedEvent.linkedEventDate})</div>` : '';
 
                         const dayDiv = $(`
-                            <div class="day ${isUnlocked ? '' : 'locked'}" data-day="${i}">
+                            <div class="day ${isUnlocked ? '' : 'locked'} ${unlocked ? 'solved' : ''}" data-day="${i}">
                                 <i class="fa-solid fa-heart"></i> February ${ordinalSuffix(i)}
                                 ${linkedDateText}
                                 <div class="lock-hover">🔒 Locked</div>
                             </div>
                         `);
 
-
-
                         $(".calendar").append(dayDiv);
                     });
+
+
 
                     $(".day").click(function () {
                         const day = $(this).data("day");
@@ -351,8 +351,13 @@
                             $("#puzzleModal").modal("show");
                         }
                     });
+                    $(".reset-button").click(() => {
+                        localStorage.clear();
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 100); // Small delay to ensure storage is cleared before reloading
+                    });
 
-                    $(".reset-button").click(() => localStorage.clear() && location.reload());
 
                     $(".alien-button").click(function () {
                         if (!document.getElementById("spaceInvadersScript")) {
@@ -369,13 +374,19 @@
             const savedBackground = localStorage.getItem("backgroundGradient");
             if (savedBackground) {
                 document.body.style.background = savedBackground;
+                document.body.style.animation = "none"; // Disable animation on reload to use saved background    
+            } else {
+                // Save initial gradient so it's set correctly
+                localStorage.setItem("backgroundGradient", getComputedStyle(document.body).background);
             }
 
-            // Save background when changed
+            // Observe changes and save every 5 seconds
             setInterval(() => {
-                localStorage.setItem("backgroundGradient", getComputedStyle(document.body).background);
+                const currentBackground = getComputedStyle(document.body).background;
+                localStorage.setItem("backgroundGradient", currentBackground);
             }, 5000);
         });
+       
     </script>
 </body>
 
